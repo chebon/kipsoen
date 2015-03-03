@@ -1,0 +1,37 @@
+<div class="container">
+    <h1>Teacher detail</h1>
+
+    <form novalidate="novalidate" class="form-horizontal">
+        <div class="control-group">
+            <label class="control-label" for="inputFirstName">First name:</label>
+            <div class="controls">
+                <input type="text" id="inputFirstName" ng-model="teacher.first_name"/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="inputLastName">second name:</label>
+            <div class="controls">
+                <input type="text" id="inputLastName" ng-model="teacher.second_name"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="inputLastName">last name:</label>
+            <div class="controls">
+                <input type="text" id="inputLastName" ng-model="teacher.last_name"/>
+            </div>
+        </div>
+
+
+        <div class="control-group">
+            <div class="controls">
+                <!-- teacher-detail.html: -->
+                <a ng-click="cancel()" class="btn btn-small">cancel</a>
+                <a ng-click="updateTeacher()" class="btn btn-small btn-primary">update teacher</a>
+
+                <!-- teacher-creation.html: -->
+                <a ng-click="createNewTeacher()" class="btn btn-small btn-primary">create new teacher</a>
+            </div>
+        </div>
+    </form>
+</div>

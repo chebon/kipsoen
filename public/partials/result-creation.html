@@ -1,0 +1,142 @@
+<div class="container">
+    <h1>Result detail</h1>
+
+    <form novalidate="novalidate" class="form-horizontal">
+        <div class="control-group">
+            <label class="control-label" for="inputFirstName">Reg name:</label>
+            <div class="controls">
+                <input type="text" id="inputFirstName" ng-model="result.student_id"/>
+            </div>
+        </div>
+
+
+        <div class="control-group">
+            <label class="control-label" for="inputFirstName">examination :</label>
+            <div class="controls">
+                <input type="text" id="inputFirstName" ng-model="result.examination"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="inputLastName">first name:</label>
+            <div class="controls">
+                <input type="text" id="inputLastName" ng-model="result.first_name"/>
+            </div>
+        </div>
+
+
+        <div class="control-group">
+            <label class="control-label" for="inputLastName">middle name:</label>
+            <div class="controls">
+                <input type="text" id="inputLastName" ng-model="result.middle_name"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="inputLastName">mathematics :</label>
+            <div class="controls">
+                <input type="text" id="inputLastName" ng-model="result.mathematics"/>
+            </div>
+        </div>
+
+
+        <div class="control-group">
+            <label class="control-label" for="inputLastName">english :</label>
+            <div class="controls">
+                <input type="text" id="inputLastName" ng-model="result.english"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="inputLastName">kiswahili :</label>
+            <div class="controls">
+                <input type="text" id="inputLastName" ng-model="result.kiswahili"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="inputLastName">biology :</label>
+            <div class="controls">
+                <input type="text" id="inputLastName" ng-model="result.bilogy"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="inputLastName">chemistry :</label>
+            <div class="controls">
+                <input type="text" id="inputLastName" ng-model="result.chemistry"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="inputLastName">physics :</label>
+            <div class="controls">
+                <input type="text" id="inputLastName" ng-model="result.physics"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="inputLastName">business studies :</label>
+            <div class="controls">
+                <input type="text" id="inputLastName" ng-model="result.business_studies"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="inputLastName">religious education :</label>
+            <div class="controls">
+                <input type="text" id="inputLastName" ng-model="result.religious_education"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="inputLastName">agriculture :</label>
+            <div class="controls">
+                <input type="text" id="inputLastName" ng-model="result.agriculture"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="inputLastName">history :</label>
+            <div class="controls">
+                <input type="text" id="inputLastName" ng-model="result.history"/>
+            </div>
+        </div>
+
+        <!--<div class="control-group">
+            <label class="control-label" for="inputLastName">total :</label>
+            <div class="controls">
+                <input type="text" id="inputLastName" ng-model="result.total"/>
+            </div>
+        </div>-->
+        <div> Sum: {{mathematics*1 + english*1}}</div>
+
+
+
+        <div class="control-group">
+            <label class="control-label" for="inputLastName">principles comment :</label>
+            <div class="controls">
+                <input type="text" id="inputLastName" ng-model="result.principles_comment"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="inputLastName">class teacher comment :</label>
+            <div class="controls">
+                <input type="text" id="inputLastName" ng-model="result.class_teacher_comment"/>
+            </div>
+        </div>
+
+
+        <div class="control-group">
+            <div class="controls">
+                <!-- result-detail.html: -->
+                <a ng-click="cancel()" class="btn btn-small">cancel</a>
+                <a ng-click="updateResult()" class="btn btn-small btn-primary">update result</a>
+
+                <!-- result-creation.html: -->
+                <a ng-click="createNewResult()" class="btn btn-small btn-primary">create new result</a>
+            </div>
+        </div>
+    </form>
+</div>
