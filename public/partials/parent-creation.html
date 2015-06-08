@@ -1,0 +1,60 @@
+<div class="container">
+    <h1>Parent detail</h1>
+
+    <form novalidate="novalidate" class="form-horizontal">
+        <div class="control-group">
+            <label class="control-label" for="inputFirstName">First name:</label>
+            <div class="controls">
+                <input type="text" id="inputFirstName" ng-model="parent.firstName"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="inputEmail"> Email:</label>
+            <div class="controls">
+                <input type="text" id="inputEmaile" ng-model="parent.email"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="inputLastName">Last name:</label>
+            <div class="controls">
+                <input type="text" id="inputLastName" ng-model="parent.lastName"/>
+            </div>
+        </div>
+
+        <div >
+            <p>selected item is : {{selectedItem}}</p>
+            <select ng-model="patenity">
+                <option ng-repeat="patanety in parenities" value="{{patanety}}">{{patanety}}</option>
+            </select>
+        </div>
+
+
+        <div>
+            <label>STUDENT</label>
+            <select
+                    class="form-control input-lg"
+                    ng-model="parent.student"
+
+                    ng-options="value.name as value.last_name  group by value.first_name for value in students">
+
+                <option>--</option>
+            </select>
+        </div>
+
+
+
+
+        <div class="control-group">
+            <div class="controls">
+                <!-- parent-detail.html: -->
+                <a ng-click="cancel()" class="btn btn-small">cancel</a>
+                <a ng-click="updateParent()" class="btn btn-small btn-primary">update parent</a>
+
+                <!-- parent-creation.html: -->
+                <a ng-click="createNewParent()" class="btn btn-small btn-primary">create new parent</a>
+            </div>
+        </div>
+    </form>
+</div>

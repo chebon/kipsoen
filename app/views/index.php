@@ -5,6 +5,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--mobile first for response on mobile device-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -48,10 +49,10 @@
 </head>
 
 <body id="page-top" class="index" ng-app="kipsoen">
-<div class="container">
+<div class="container-fluid">
 <!-- Navigation -->
 <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
+    <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -60,7 +61,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+            <a class="navbar-brand page-scroll" href="#page-top"> Bootstrap</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -88,7 +89,7 @@
         </div>
         <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container-fluid -->
+    <!-- /.container-fluid-fluid -->
 </nav>
 
 </div>
@@ -100,9 +101,9 @@
 
 
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="intro-text">
-            <div class="intro-lead-in">Welcome To Our Studio!</div>
+            <div class="intro-lead-in">Welcome To my world!</div>
             <div class="intro-heading">It's Nice To Meet You</div>
             <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
         </div>
@@ -110,12 +111,12 @@
 </header>
 
 
-<div class="container"ng-view>
+<div class="container-fluid"ng-view>
 </div>
 
 <!-- Services Section -->
 <section id="services">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">Services</h2>
@@ -153,7 +154,7 @@
 
 <!-- Portfolio Grid Section -->
 <section id="portfolio" class="bg-light-gray">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">Portfolio</h2>
@@ -251,7 +252,7 @@
 
 <!-- About Section -->
 <section id="about">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">About</h2>
@@ -332,7 +333,7 @@
 
 <!-- Team Section -->
 <section id="team" class="bg-light-gray">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">Our Amazing Team</h2>
@@ -396,7 +397,7 @@
 
 <!-- Clients Aside -->
 <aside class="clients">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-3 col-sm-6">
                 <a href="#">
@@ -423,7 +424,7 @@
 </aside>
 
 <section id="contact">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">Contact Us</h2>
@@ -467,7 +468,7 @@
 </section>
 
 <footer>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-4">
                 <span class="copyright">Copyright &copy; Your Website 2014</span>
@@ -506,7 +507,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <div class="modal-body">
@@ -539,7 +540,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <div class="modal-body">
@@ -565,7 +566,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <div class="modal-body">
@@ -592,7 +593,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <div class="modal-body">
@@ -619,7 +620,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <div class="modal-body">
@@ -646,7 +647,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <div class="modal-body">

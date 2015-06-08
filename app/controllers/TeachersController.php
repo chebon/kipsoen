@@ -34,6 +34,15 @@ class TeachersController extends \BaseController {
 	{
 		$data = Input::all();
         Teacher::create($data);
+
+        $email=Input::get('email');
+        //$password=Input::get('password');
+
+
+        Sentry::register(array(
+            'email'=> $email,
+            'password'=> 'teacher123',
+        ));
 	}
 
 	/**

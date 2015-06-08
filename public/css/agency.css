@@ -345,7 +345,7 @@ section h3.section-subheading {
     }
 }
 
-.service-heading {
+.Anouncement-heading {
     margin: 15px 0;
     text-transform: none;
 }
@@ -627,23 +627,23 @@ section h3.section-subheading {
     }
 }
 
-.team-member {
+.Contacts-member {
     margin-bottom: 50px;
     text-align: center;
 }
 
-.team-member img {
+.Contacts-member img {
     margin: 0 auto;
     border: 7px solid #fff;
 }
 
-.team-member h4 {
+.Contacts-member h4 {
     margin-top: 25px;
     margin-bottom: 0;
     text-transform: none;
 }
 
-.team-member p {
+.Contacts-member p {
     margin-top: 0;
 }
 
@@ -768,7 +768,7 @@ ul.social-buttons li a:active {
     outline: 0;
 }
 
-.portfolio-modal .modal-content {
+.performance-modal .modal-content {
     padding: 100px 0;
     min-height: 100%;
     border: 0;
@@ -779,32 +779,32 @@ ul.social-buttons li a:active {
     box-shadow: none;
 }
 
-.portfolio-modal .modal-content h2 {
+.performance-modal .modal-content h2 {
     margin-bottom: 15px;
     font-size: 3em;
 }
 
-.portfolio-modal .modal-content p {
+.performance-modal .modal-content p {
     margin-bottom: 30px;
 }
 
-.portfolio-modal .modal-content p.item-intro {
+.performance-modal .modal-content p.item-intro {
     margin: 20px 0 30px;
     font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 16px;
     font-style: italic;
 }
 
-.portfolio-modal .modal-content ul.list-inline {
+.performance-modal .modal-content ul.list-inline {
     margin-top: 0;
     margin-bottom: 30px;
 }
 
-.portfolio-modal .modal-content img {
+.performance-modal .modal-content img {
     margin-bottom: 30px;
 }
 
-.portfolio-modal .close-modal {
+.performance-modal .close-modal {
     position: absolute;
     top: 25px;
     right: 25px;
@@ -814,11 +814,11 @@ ul.social-buttons li a:active {
     cursor: pointer;
 }
 
-.portfolio-modal .close-modal:hover {
+.performance-modal .close-modal:hover {
     opacity: .3;
 }
 
-.portfolio-modal .close-modal .lr {
+.performance-modal .close-modal .lr {
     z-index: 1051;
     width: 1px;
     height: 75px;
@@ -829,7 +829,7 @@ ul.social-buttons li a:active {
     transform: rotate(45deg);
 }
 
-.portfolio-modal .close-modal .lr .rl {
+.performance-modal .close-modal .lr .rl {
     z-index: 1052;
     width: 1px;
     height: 75px;
@@ -839,7 +839,7 @@ ul.social-buttons li a:active {
     transform: rotate(90deg);
 }
 
-.portfolio-modal .modal-backdrop {
+.performance-modal .modal-backdrop {
     display: none;
     opacity: 0;
 }

@@ -43,8 +43,13 @@ kipsoen.controller('ParentDetailCtrl', ['$scope', '$routeParams', 'ParentFactory
         $scope.parent = ParentFactory.show({id: $routeParams.id});
     }]);
 
-kipsoen.controller('ParentCreationCtrl', ['$scope', 'ParentsFactory', '$location',
-    function ($scope, ParentsFactory, $location) {
+kipsoen.controller('ParentCreationCtrl', ['$scope', 'ParentsFactory', 'StudentsFactory', '$location',
+    function ($scope, ParentsFactory, StudentsFactory, $location) {
+
+
+        $scope.students = StudentsFactory.query();
+
+        $scope.parenities = ['father', 'mother', 'guardian']
 
         // callback for ng-click 'createNewParent':
         $scope.createNewParent = function () {

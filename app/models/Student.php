@@ -10,6 +10,7 @@ class Student extends \Eloquent {
         "registration_number",
         "parent",
         "date_of_birth",
+        'class',
         "create_at",
         "updated_at"
     ];

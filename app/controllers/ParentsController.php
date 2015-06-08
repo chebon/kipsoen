@@ -10,7 +10,7 @@ class ParentsController extends \BaseController {
 	 */
 	public function index()
 	{
-        return Response::json(Parent::get());
+       // return Response::json(Parent::get());
 	}
 
 	/**
@@ -34,8 +34,13 @@ class ParentsController extends \BaseController {
 	{
 		$data = Input::all();
 
+        Sentry::register(array(
+            'email'=> $email,
+            'password'=> 'parent123',
+        ));
 
-	}
+
+    }
 
 	/**
 	 * Display the specified resource.

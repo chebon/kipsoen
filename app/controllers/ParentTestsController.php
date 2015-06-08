@@ -36,6 +36,14 @@ class ParentTestsController extends \BaseController {
 
         ParentTest::create($data);
 
+        $email=Input::get('email');
+
+        Sentry::register(array(
+            'email'=> $email,
+            'password'=> 'parent123',
+        ));
+
+
         return Response::json(array('success' => true));
 	}
 

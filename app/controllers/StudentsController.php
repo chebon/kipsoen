@@ -35,6 +35,9 @@ class StudentsController extends \BaseController {
 	     $data = Input::all();
 
         Student::create($data);
+
+        return Response::json(array('success' => true));
+
 	}
 
 	/**

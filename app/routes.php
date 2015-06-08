@@ -11,9 +11,22 @@
 |
 */
 
+
+Route::get('/try', function()
+{
+    return View::make('hello');
+});
+
+
+
 Route::get('/', function()
 {
-	return View::make('index');
+	return View::make('index_0ne');
+});
+
+Route::get('/index', function()
+{
+    return View::make('index_two');
 });
 
 Route::resource('students', 'StudentsController');
@@ -24,4 +37,10 @@ Route::resource('teachers', 'TeachersController');
 
 Route::resource('parent', 'ParentTestsController');
 
-Route::resource('results', 'ResultsController');
+Route::resource('results.students', 'ResultsController');
+
+Route::resource('login', 'LoginsController');
+
+Route::resource('create', 'CreatesController');
+
+Route::resource('group', 'GroupsController');
