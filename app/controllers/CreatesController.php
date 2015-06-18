@@ -83,7 +83,9 @@ class CreatesController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+        $user = Sentry::findUserById($id);
+
+        return $user;
 	}
 
 	/**
@@ -119,7 +121,18 @@ class CreatesController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+        try
+        {
+            // Find the user using the user id
+            $user = Sentry::findUserById($id);
+
+            // Delete the user
+            $user->delete();
+        }
+        catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
+        {
+            echo 'User was not found.';
+        }
 	}
 
 }

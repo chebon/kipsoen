@@ -20,6 +20,7 @@
     <meta name="author" content="">
 
     <title>Agency - Start Bootstrap Theme</title>
+    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -346,6 +347,7 @@
 <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>-->
 <script src="js/classie.js"></script>
 <script src="js/cbpAnimatedHeader.js"></script>
+
 
 <!-- Contact Form JavaScript -->
 <script src="js/jqBootstrapValidation.js"></script>

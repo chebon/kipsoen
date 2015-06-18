@@ -24,14 +24,12 @@ Route::get('/', function()
 	return View::make('index_0ne');
 });
 
-Route::get('/index', function()
+Route::group(array( 'before' => 'auth'), function()
 {
-    return View::make('index_two');
-});
 
 Route::resource('students', 'StudentsController');
 
-Route::resource('teachers', 'TeachersController');
+//Route::resource('teachers', 'TeachersController');
 
 //Route::resource('parents', 'ParentsController');
 
@@ -44,3 +42,20 @@ Route::resource('login', 'LoginsController');
 Route::resource('create', 'CreatesController');
 
 Route::resource('group', 'GroupsController');
+
+Route::resource('groupassignments', 'GroupassignmentsController');
+
+Route::resource('useractiviations', 'UseractiviationsController');
+
+Route::resource('ambenges', 'AmbengesController');
+
+
+
+
+    Route::resource('teachers', 'teachers');
+
+    Route::get('/index', function()
+    {
+        return View::make('index_two');
+    });
+});

@@ -53,42 +53,59 @@ class LoginsController extends \BaseController {
             );
 
             // Authenticate the user
-            $user = Sentry::authenticate($credentials, false);
+            $user = Sentry::authenticateAndRemember($credentials, false);
+
+            //AndRemember
 
             // echo 'logged in';
 
-            return Redirect::to('/login');
+            return Redirect::to('/index');
 
         }
         catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
         {
             echo 'Login field is required.';
+
+            return Redirect::to('/');
         }
         catch (Cartalyst\Sentry\Users\PasswordRequiredException $e)
         {
             echo 'Password field is required.';
+
+            return Redirect::to('/');
         }
         catch (Cartalyst\Sentry\Users\WrongPasswordException $e)
         {
             echo 'Wrong password, try again.';
+
+            return Redirect::to('/');
+
         }
         catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
         {
             echo 'User was not found.';
+
+            return Redirect::to('/');
         }
         catch (Cartalyst\Sentry\Users\UserNotActivatedException $e)
         {
             echo 'User is not activated.';
+
+            return Redirect::to('/');
         }
 
 // The following is only required if the throttling is enabled
         catch (Cartalyst\Sentry\Throttling\UserSuspendedException $e)
         {
             echo 'User is suspended.';
+
+            return Redirect::to('/');
         }
         catch (Cartalyst\Sentry\Throttling\UserBannedException $e)
         {
             echo 'User is banned.';
+
+            return Redirect::to('/');
         }
 
 	}
@@ -102,7 +119,13 @@ class LoginsController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+        $user = Sentry::findUserById($id);
+
+        Sentry::logout();
+
+        return Redirect::to('/');
+
+        //return $user;
 	}
 
 	/**

@@ -1,23 +1,21 @@
 <?php
 
-class GroupsController extends \BaseController {
+class AmbengesController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
-	 * GET /groups
+	 * GET /ambenges
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-        $groups = Sentry::findAllGroups();
-
-        return $groups;
+		echo "hello world";
 	}
 
 	/**
 	 * Show the form for creating a new resource.
-	 * GET /groups/create
+	 * GET /ambenges/create
 	 *
 	 * @return Response
 	 */
@@ -28,50 +26,30 @@ class GroupsController extends \BaseController {
 
 	/**
 	 * Store a newly created resource in storage.
-	 * POST /groups
+	 * POST /ambenges
 	 *
 	 * @return Response
 	 */
 	public function store()
 	{
-        try
-        {
-            $name=Input::get('name');
-            $group = Sentry::createGroup(array(
-                'name'        => $name,
-                'permissions' => array(
-                    'admin' => 1,
-                    'users' => 1,
-                ),
-            ));
-        }
-        catch (Cartalyst\Sentry\Groups\NameRequiredException $e)
-        {
-            echo 'Name field is required';
-        }
-        catch (Cartalyst\Sentry\Groups\GroupExistsException $e)
-        {
-            echo 'Group already exists';
-        }
+		//
 	}
 
 	/**
 	 * Display the specified resource.
-	 * GET /groups/{id}
+	 * GET /ambenges/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
 	public function show($id)
 	{
-        $group = Sentry::findGroupById($id);
-
-        return $group;
+		//
 	}
 
 	/**
 	 * Show the form for editing the specified resource.
-	 * GET /groups/{id}/edit
+	 * GET /ambenges/{id}/edit
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -83,7 +61,7 @@ class GroupsController extends \BaseController {
 
 	/**
 	 * Update the specified resource in storage.
-	 * PUT /groups/{id}
+	 * PUT /ambenges/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -95,7 +73,7 @@ class GroupsController extends \BaseController {
 
 	/**
 	 * Remove the specified resource from storage.
-	 * DELETE /groups/{id}
+	 * DELETE /ambenges/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
