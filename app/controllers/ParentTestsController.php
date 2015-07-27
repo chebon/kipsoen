@@ -38,9 +38,10 @@ class ParentTestsController extends \BaseController {
 
         $email=Input::get('email');
 
-        Sentry::register(array(
+        $user =  Sentry::createUser(array(
             'email'=> $email,
-            'password'=> 'parent123',
+            'password'=> 'password123',
+            'activated' => true,
         ));
 
 

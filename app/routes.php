@@ -21,7 +21,7 @@ Route::get('/try', function()
 
 Route::get('/', function()
 {
-	return View::make('index_0ne');
+	return View::make('validations');
 });
 
 Route::group(array( 'before' => 'auth'), function()
@@ -37,7 +37,7 @@ Route::resource('parent', 'ParentTestsController');
 
 Route::resource('results.students', 'ResultsController');
 
-Route::resource('login', 'LoginsController');
+
 
 Route::resource('create', 'CreatesController');
 
@@ -49,6 +49,8 @@ Route::resource('useractiviations', 'UseractiviationsController');
 
 Route::resource('ambenges', 'AmbengesController');
 
+    Route::resource('create', 'CreatesController');
+
 
 
 
@@ -56,6 +58,14 @@ Route::resource('ambenges', 'AmbengesController');
 
     Route::get('/index', function()
     {
-        return View::make('index_two');
+        return View::make('index');
     });
 });
+
+
+
+
+Route::resource('login', 'LoginsController');
+
+
+
