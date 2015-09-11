@@ -11,6 +11,7 @@
     <script src="angular/angular-route.js"></script>
     <script src="angular/angular-resource.js"></script>
     <script src="js/app.js"></script>
+    <script src="controllers/Examination.js"></script>
     <script src="controllers/studentController.js"></script>
     <script src="services/StudentService.js"></script>
     <script src="controllers/teacherController.js"></script>
@@ -19,6 +20,7 @@
     <script src="services/ParentService.js"></script>
     <script src="controllers/ResultController.js"></script>
     <script src="services/ResultService.js"></script>
+    <script src="services/ExaminationService.js"></script>
     <script scr="js/route-styles.js"></script>
 
 

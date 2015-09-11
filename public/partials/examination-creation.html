@@ -1,0 +1,36 @@
+<style>
+    .input-group{
+        padding-bottom: 1cm;
+        /*padding-top: 1cm*/
+    ;
+
+    }
+
+
+</style>
+
+<div class="container-fluid control-label col-md-6 col-md-offset-3">
+
+    <div class="input-group input-group-lg">
+        <span class="input-group-addon glyphicon glyphicon-user" id="examination_name"></span>
+        <input type="text" class="form-control" placeholder="examination name" aria-describedby="examination_name" ng-model="examination.examination_name">
+    </div>
+
+    <div class="input-group input-group-lg">
+        <span class="input-group-addon glyphicon glyphicon-user" id="stream_"></span>
+        <input type="text" class="form-control" placeholder="Stream " aria-describedby="stream_" ng-model="examination.stream_">
+    </div>
+
+
+
+    <div class="control-group">
+        <div class="controls">
+            <!-- examnation-detail.html: -->
+            <a ng-click="cancel()" class="btn btn-small">cancel</a>
+            <a ng-click="updateExamination()" class="btn btn-small btn-primary">update examnation</a>
+
+            <!-- examnation-creation.html: -->
+            <a ng-click="createNewExamination()" class="btn btn-small btn-primary">create new examnation</a>
+        </div>
+    </div>
+    </div>

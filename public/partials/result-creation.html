@@ -1,138 +1,97 @@
-<div class="container">
-    <h1>Result detail</h1>
 
-    <form novalidate="novalidate" class="form-horizontal">
-        <div class="control-group">
-            <label class="control-label" for="inputFirstName">Reg name:</label>
-            <div class="controls">
-                <input type="text" id="inputFirstName" ng-model="result.student_id"/>
-            </div>
-        </div>
+<style>
+    .input-group {
 
+        padding-bottom: 0.5cm;
 
-        <div class="control-group">
-            <label class="control-label" for="inputFirstName">examination :</label>
-            <div class="controls">
-                <input type="text" id="inputFirstName" ng-model="result.examination"/>
-            </div>
-        </div>
+    }
 
-        <div class="control-group">
-            <label class="control-label" for="inputLastName">first name:</label>
-            <div class="controls">
-                <input type="text" id="inputLastName" ng-model="result.first_name"/>
-            </div>
-        </div>
+    .container-fluid{
+        /*padding-top: 3cm;*/
+    }
+</style>
 
+<div class="container-fluid control-label col-md-6 col-md-offset-3">
+    <h1> detail</h1>
 
-        <div class="control-group">
-            <label class="control-label" for="inputLastName">middle name:</label>
-            <div class="controls">
-                <input type="text" id="inputLastName" ng-model="result.middle_name"/>
-            </div>
-        </div>
-
-        <div class="control-group">
-            <label class="control-label" for="inputLastName">mathematics :</label>
-            <div class="controls">
-                <input type="text" id="inputLastName" ng-model="result.mathematics"/>
-            </div>
-        </div>
-
-
-        <div class="control-group">
-            <label class="control-label" for="inputLastName">english :</label>
-            <div class="controls">
-                <input type="text" id="inputLastName" ng-model="result.english"/>
-            </div>
-        </div>
-
-        <div class="control-group">
-            <label class="control-label" for="inputLastName">kiswahili :</label>
-            <div class="controls">
-                <input type="text" id="inputLastName" ng-model="result.kiswahili"/>
-            </div>
-        </div>
-
-        <div class="control-group">
-            <label class="control-label" for="inputLastName">biology :</label>
-            <div class="controls">
-                <input type="text" id="inputLastName" ng-model="result.bilogy"/>
-            </div>
-        </div>
-
-        <div class="control-group">
-            <label class="control-label" for="inputLastName">chemistry :</label>
-            <div class="controls">
-                <input type="text" id="inputLastName" ng-model="result.chemistry"/>
-            </div>
-        </div>
-
-        <div class="control-group">
-            <label class="control-label" for="inputLastName">physics :</label>
-            <div class="controls">
-                <input type="text" id="inputLastName" ng-model="result.physics"/>
-            </div>
-        </div>
-
-        <div class="control-group">
-            <label class="control-label" for="inputLastName">business studies :</label>
-            <div class="controls">
-                <input type="text" id="inputLastName" ng-model="result.business_studies"/>
-            </div>
-        </div>
-
-        <div class="control-group">
-            <label class="control-label" for="inputLastName">religious education :</label>
-            <div class="controls">
-                <input type="text" id="inputLastName" ng-model="result.religious_education"/>
-            </div>
-        </div>
-
-        <div class="control-group">
-            <label class="control-label" for="inputLastName">agriculture :</label>
-            <div class="controls">
-                <input type="text" id="inputLastName" ng-model="result.agriculture"/>
-            </div>
-        </div>
-
-        <div class="control-group">
-            <label class="control-label" for="inputLastName">history :</label>
-            <div class="controls">
-                <input type="text" id="inputLastName" ng-model="result.history"/>
-            </div>
-        </div>
-
-        <!--<div class="control-group">
-            <label class="control-label" for="inputLastName">total :</label>
-            <div class="controls">
-                <input type="text" id="inputLastName" ng-model="result.total"/>
+    <form novalidate="novalidate" class="form-horizontal form-inline">
+        <!--<div class="form-group panel-body">
+            <label class="controls" for="inputFirstName">First name:</label>
+            <div class="form-group col-lg-10">
+                <input type="text" class="form-control" id="inputFirstName" ng-model="result.first_name"/>
             </div>
         </div>-->
-        <div> Sum: {{mathematics*1 + english*1}}</div>
 
 
-
-        <div class="control-group">
-            <label class="control-label" for="inputLastName">principles comment :</label>
-            <div class="controls">
-                <input type="text" id="inputLastName" ng-model="result.principles_comment"/>
-            </div>
-        </div>
-
-        <div class="control-group">
-            <label class="control-label" for="inputLastName">class teacher comment :</label>
-            <div class="controls">
-                <input type="text" id="inputLastName" ng-model="result.class_teacher_comment"/>
-            </div>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon glyphicon glyphicon-user" id="student_id"></span>
+            <input type="number" class="form-control" placeholder="student id" aria-describedby="sizing-addon1" ng-model="result.student_id">
         </div>
 
 
-        <div class="control-group">
-            <div class="controls">
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon glyphicon glyphicon-user" id="first_name"></span>
+            <input type="text" class="form-control" placeholder="second name" aria-describedby="first_name" ng-model="result.first_name">
+        </div>
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon glyphicon glyphicon-user" id="middle_name"></span>
+            <input type="text" class="form-control" placeholder="middle name" aria-describedby="last_name" ng-model="result.middle_name">
+        </div>
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon glyphicon glyphicon-user" id="examination"></span>
+            <input type="text" class="form-control" placeholder="examination" aria-describedby="last_name" ng-model="result.examination">
+        </div>
+
+
+
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon glyphicon glyphicon-tags" id="registration_number"></span>
+            <input type="number" class="form-control" placeholder="registration number" aria-describedby="registration_number" ng-model="result.registration_number">
+        </div>
+
+
+
+        <!--<div class="input-group input-group-lg">
+            <span class="input-group-addon glyphicon glyphicon-education" id="class"></span>
+            <input type="text" class="form-control" placeholder="class " aria-describedby="class" ng-model="result.class">
+        </div>-->
+
+        <!--<div >
+            <p>selected item is : {{selectedItem}}</p>
+            <select ng-model="patenity">
+                <option ng-repeat="patanety in parenities" value="{{patanety}}">{{patanety}}</option>
+            </select>
+        </div>-->
+
+
+        <!--<div>
+            <label>STUDENT</label>
+            <select
+                    class="form-control input-lg"
+                    ng-model="result.result"
+
+                    ng-options="value.name as value.last_name  group by value.first_name for value in results">
+
+                <option>--</option>
+            </select>
+        </div>
+-->
+
+
+
+
+
+
+
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
                 <!-- result-detail.html: -->
-                <a ng-click="cancel()" class="btn btn-small">cancel</a>
-                <a ng-click="updateResult()" class="btn btn-small btn-primary">update result</a>
+                <a ng-click="cancel()" class="btn btn-small btn-primary">cancel</a>
+
 
                 <!-- result-creation.html: -->
                 <a ng-click="createNewResult()" class="btn btn-small btn-primary">create new result</a>

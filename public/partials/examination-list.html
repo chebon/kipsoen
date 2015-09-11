@@ -1,0 +1,59 @@
+<div class="container">
+    <a ng-click="createNewExamination()" class="btn btn-info">new examination</a>
+</div>
+<div class="container">
+
+
+
+
+    <table class="table">
+        <tbody>
+
+
+        <tr>
+
+
+            <form class="form-control">
+
+                <input st-search="" class="input-medium search-query" placeholder="complete examination search" type="text"/>
+
+            </form>
+
+
+        </tr>
+        </tbody>
+    </table>
+
+
+    <table class="table table-condensed table-bordered table-hover tableTop">
+        <thead>
+
+        <!--<tr>
+            <th colspan="6"><input st-search="" class="form-control" placeholder="complete examination search" type="text"/>
+            </th>
+        </tr>-->
+        <tr>
+            <!--<th st-sort="id">id</th>-->
+            <th st-sort="Examination_name"> name</th>
+            <th st-sort="stream">stream</th>
+
+            <th st-sort="actions">actions</th>
+        </tr>
+
+        </thead>
+        <tbody>
+        <tr ng-repeat="examination in examinations">
+            <!--<td>{{ examination.id }}</td>-->
+
+            <td>{{ examination.examination_name }}</td>
+             <td>{{ examination.stream_ }}</td>
+            <td>
+                <a ng-click="editExamination(examination.id)" class="btn btn-info">{{examination.parent}}</a>
+                <a ng-click="deleteExamination(examination.id)" class="btn btn-small btn-danger">delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+

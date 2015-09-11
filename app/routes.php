@@ -29,13 +29,13 @@ Route::group(array( 'before' => 'auth'), function()
 
 Route::resource('students', 'StudentsController');
 
-//Route::resource('teachers', 'TeachersController');
+Route::resource('teachers', 'TeachersController');
 
 //Route::resource('parents', 'ParentsController');
 
 Route::resource('parent', 'ParentTestsController');
 
-Route::resource('results.students', 'ResultsController');
+Route::resource('results', 'ResultsController');
 
 
 
@@ -54,7 +54,7 @@ Route::resource('ambenges', 'AmbengesController');
 
 
 
-    Route::resource('teachers', 'teachers');
+  //  Route::resource('teachers', 'teachers');
 
     Route::get('/index', function()
     {
@@ -74,4 +74,4 @@ Route::get('/login', function()
 });
 
 
-
+Route::resource('examinations', 'ExaminationsController');

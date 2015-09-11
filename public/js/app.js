@@ -4,7 +4,7 @@
 
 
 var kipsoen = angular.module('kipsoen', ['ngRoute', 'StudentController', 'studentService', "TeacherController", "teacherService",
-"parentService", "ParentController", 'resultService', 'ResultController']);
+"parentService", "ParentController", 'resultService', 'ResultController', 'examinationService', 'ExaminationController']);
 
 
 kipsoen.config(['$routeProvider', function ($routeProvider) {
@@ -23,9 +23,17 @@ kipsoen.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/parent-creation', {templateUrl: 'partials/parent-creation.html', controller: 'ParentCreationCtrl'});
 
 
+    $routeProvider.when('/examination-list', {templateUrl: 'partials/examination-list.html', controller: 'ExaminationListCtrl'});
+     $routeProvider.when('/examination-detail/:id', {templateUrl: 'partials/examination-detail.html', controller: 'ExaminationDetailCtrl'});
+     $routeProvider.when('/examination-creation', {templateUrl: 'partials/examination-creation.html', controller: 'ExaminationCreationCtrl'});
+
     $routeProvider.when('/result-list', {templateUrl: 'partials/result-list.html', controller: 'ResultListCtrl'});
     $routeProvider.when('/result-detail/:id', {templateUrl: 'partials/result-detail.html', controller: 'ResultDetailCtrl'});
     $routeProvider.when('/result-creation', {templateUrl: 'partials/result-creation.html', controller: 'ResultCreationCtrl'});
+
+    /* $routeProvider.when('/entry-list', {templateUrl: 'partials/entry-list.html', controller: 'EntryListCtrl'});
+     $routeProvider.when('/entry-detail/:id', {templateUrl: 'partials/entry-detail.html', controller: 'EntryDetailCtrl'});
+     $routeProvider.when('/entry-creation', {templateUrl: 'partials/entry-creation.html', controller: 'EntryCreationCtrl'});*/
 
     $routeProvider.otherwise({redirectTo: '/student-list'});
 }]);

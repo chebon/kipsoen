@@ -6,12 +6,18 @@
 
 var kipsoen = angular.module('StudentController', []);
 
-kipsoen.controller('StudentListCtrl', ['$scope', 'StudentsFactory', 'StudentFactory', '$location',
-    function ($scope, StudentsFactory, StudentFactory, $location) {
+kipsoen.controller('StudentListCtrl', ['$scope', 'StudentsFactory', 'StudentFactory', 'ExaminationFactory', '$location',
+    function ($scope, StudentsFactory, StudentFactory, ExaminationFactory, $location) {
 
         // callback for ng-click 'editStudent':
         $scope.editStudent = function $email(studentId) {
             $location.path('/student-detail/' + studentId);
+        };
+
+
+
+        $scope.result = function $email(studentId) {
+            $location.path('/result-detail/' + studentId);
         };
 
         // callback for ng-click 'deleteStudent':
@@ -19,6 +25,12 @@ kipsoen.controller('StudentListCtrl', ['$scope', 'StudentsFactory', 'StudentFact
             StudentFactory.delete({ id: studentId });
             $scope.students = StudentsFactory.query();
         };
+
+
+       /* $scope.deleteExamination = function (studentId) {
+            ExaminationFactory.delete({ id: studentId });
+            $scope.students = StudentsFactory.query();
+        };*/
 
         // callback for ng-click 'createStudent':
         $scope.createNewStudent = function () {
