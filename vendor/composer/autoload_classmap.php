@@ -88,6 +88,7 @@ return array(
     'ClassPreloader\\Parser\\FileVisitor' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/FileVisitor.php',
     'ClassPreloader\\Parser\\NodeTraverser' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/NodeTraverser.php',
     'Create' => $baseDir . '/app/models/Create.php',
+    'CreateChelalsTable' => $baseDir . '/app/database/migrations/2015_07_28_131315_create_chelals_table.php',
     'CreateParentsTable' => $baseDir . '/app/database/migrations/2015_02_20_141034_create_parents_table.php',
     'CreateResultsTable' => $baseDir . '/app/database/migrations/2015_02_26_190105_create_results_table.php',
     'CreateStudentsTable' => $baseDir . '/app/database/migrations/2015_02_20_091946_create_students_table.php',

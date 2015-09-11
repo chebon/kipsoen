@@ -68,4 +68,10 @@ Route::resource('ambenges', 'AmbengesController');
 Route::resource('login', 'LoginsController');
 
 
+Route::get('/login', function()
+{
+    return View::make('index_0ne');
+});
+
+
 

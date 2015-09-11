@@ -1,39 +1,31 @@
-<div class="row"
-<div class="col-lg-20" >
-<!--<table class="table table-striped table-condensed table-hover rounded">
-        <thead>
-        <tr>
-            <th>First name</th>
-            <th>registration  number</th>
-            <th>surname name</th>
-            <th>class</th>
-            <th>actions</th>
-            &lt;!&ndash;<th style="min-width: 80px;">middle name</th>
-            <th style="min-width: 80px;"> surname</th>
-            <th style="width:20px;"> </th>
-            <th style="width:20px;"> </th>&ndash;&gt;
-        </tr>
-        </thead>
+<div class="container">
+<a ng-click="createNewStudent()" class="btn btn-info">new student</a>
+</div>
+<div class="container">
+
+
+
+
+    <table class="table">
         <tbody>
-        <tr ng-repeat="student in students">
-            <td>{{ student.first_name }}</td>
-            <td>{{ student.registration_number }}</td>
-            <td>{{ student.second_name }}</td>
-            <td>{{ student.class }}</td>
-            <td><a ng-click="editStudent(student.id)" class="btn btn-info">info</a>
-            <a ng-click="deleteStudent(student.id)" class="btn btn-small btn-danger">delete</a></td>
-        </tr>
-        </tbody>
-    </table>-->
-    <a ng-click="createNewStudent()" class="btn btn-info">create new student</a>
+
 
     <tr>
-            <th colspan="2"><input st-search="" class="form-control" placeholder="complete student search" type="text"/>
-            </th>
+
+
+                <form class="form-control">
+
+                <input st-search="" class="input-medium search-query" placeholder="complete student search" type="text"/>
+
+                </form>
+
+
         </tr>
+        </tbody>
+    </table>
 
 
-    <table class="table  table-condensed curved">
+    <table class="table table-condensed table-bordered table-hover tableTop">
         <thead>
 
         <!--<tr>
@@ -63,7 +55,7 @@
             <td>{{ student.date_of_birth }}</td>
            <!-- <td>{{ student.class }}</td>-->
             <td>
-          <a ng-click="editStudent(student.id)" class="btn btn-info">info</a>
+          <a ng-click="editStudent(student.id)" class="btn btn-info">{{student.parent}}</a>
           <a ng-click="deleteStudent(student.id)" class="btn btn-small btn-danger">delete</a>
             </td>
         </tr>

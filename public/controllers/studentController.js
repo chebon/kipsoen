@@ -10,7 +10,7 @@ kipsoen.controller('StudentListCtrl', ['$scope', 'StudentsFactory', 'StudentFact
     function ($scope, StudentsFactory, StudentFactory, $location) {
 
         // callback for ng-click 'editStudent':
-        $scope.editStudent = function (studentId) {
+        $scope.editStudent = function $email(studentId) {
             $location.path('/student-detail/' + studentId);
         };
 

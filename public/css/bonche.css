@@ -1,0 +1,14 @@
+tr.spaceUnder > td
+{
+    padding-bottom: 1cm;
+}
+
+div.view
+{
+    padding-top: 1cm;
+}
+
+table.tablebottom {
+
+    padding-bottom: 2px;
+}
