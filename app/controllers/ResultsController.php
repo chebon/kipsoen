@@ -43,9 +43,9 @@ class ResultsController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($student_id)
 	{
-		$result = Result::findorfail($id);
+		$result = Result::findorfail($student_id);
 
         return $result;
 	}
@@ -59,7 +59,7 @@ class ResultsController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		//sdfbdssa
 	}
 
 	/**
@@ -74,7 +74,9 @@ class ResultsController extends \BaseController {
 		$result = Result::findorfail($id);
        // $data =Input::all();
 
-
+        $first_name=Input::get('first_name');
+        $middle_name=Input::get('middle_name');
+        $examination=Input::get('examination');
         $mathematics=Input::get('mathematics');
         $english=Input::get('english');
         $kiswahili=Input::get('kiswahili');
@@ -97,6 +99,10 @@ class ResultsController extends \BaseController {
             'agriculture'=>$agriculture,
             'religious_education'=>$religious_education,
             'business_studies'=>$business_studies,
+            'examination'=>$examination,
+            'first_name'=>$first_name,
+            'middle_name'=>$middle_name,
+
 
             'total'=>$mathematics+$english+$kiswahili+$biology+$physics+$chemistry+$history+$agriculture+$religious_education+$business_studies
         );

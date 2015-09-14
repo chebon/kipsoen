@@ -29,8 +29,8 @@ kipsoen.controller('ResultListCtrl', ['$scope', 'ResultsFactory', 'ResultFactory
         $scope.results = ResultsFactory.query();
     }]);
 
-kipsoen.controller('ResultDetailCtrl', ['$scope', '$routeParams', 'ResultFactory', '$location',
-    function ($scope, $routeParams, ResultFactory, $location) {
+kipsoen.controller('ResultDetailCtrl', ['$scope', '$routeParams', 'ResultsFactory', 'ExaminationsFactory', 'StudentsFactory', 'ResultFactory', '$location',
+    function ($scope, $routeParams, ResultsFactory, ExaminationsFactory, StudentsFactory, ResultFactory, $location) {
 
         // callback for ng-click 'updateResult':
         $scope.updateResult = function () {
@@ -43,7 +43,12 @@ kipsoen.controller('ResultDetailCtrl', ['$scope', '$routeParams', 'ResultFactory
             $location.path('/result-list');
         };
 
+
+       $scope.students = StudentsFactory.query();
+
         $scope.result = ResultFactory.show({id: $routeParams.id});
+
+        $scope.examinations = ExaminationsFactory.query();
     }]);
 
 kipsoen.controller('ResultCreationCtrl', ['$scope', 'ResultsFactory', '$location',

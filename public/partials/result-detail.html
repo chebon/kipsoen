@@ -1,0 +1,198 @@
+
+<style>
+    .input-group {
+
+        padding-bottom: 0.5cm;
+
+    }
+
+    .container-fluid{
+        /*padding-top: 3cm;*/
+    }
+
+    .input-group-addon{
+        /*background-color: #463c54;*/
+
+        background-color: #8c8c8c;
+    }
+</style>
+
+<div class="container-fluid control-label col-md-6 col-md-offset-3">
+    <h1> detail</h1>
+
+    <form novalidate="novalidate" class="form-horizontal form-inline" >
+        <!--<div class="form-group panel-body">
+            <label class="controls" for="inputFirstName">First name:</label>
+            <div class="form-group col-lg-10">
+                <input type="text" class="form-control" id="inputFirstName" ng-model="result.first_name"/>
+            </div>
+        </div>-->
+
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon">Middle Name</span>
+            <select
+                    class="form-control input-lg"
+                    ng-model="result.middle_name"
+
+                    ng-options="value.last_name as value.last_name  group by value.second_name for value in students">
+
+                <option>--</option>
+            </select>
+        </div>
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon">First Name</span>
+            <select
+                    class="form-control input-lg"
+                    ng-model="result.first_name"
+
+                    ng-options="value.first_name as value.first_name  group by value.class for value in students">
+
+                <option>--</option>
+            </select>
+        </div>
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon">Reg #</span>
+            <select
+                    class="form-control input-lg"
+                    ng-model="result.first_name"
+
+                    ng-options="value.registration_number as value.registration_number  group by value.second_name for value in students">
+
+                <option>--</option>
+            </select>
+        </div>
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon">Examination</span>
+            <select
+                    class="form-control input-lg"
+                    ng-model="result.examination"
+
+                    ng-options="value.examination_name as value.examination_name  group by value.stream_ for value in examinations">
+
+                <option>--</option>
+            </select>
+        </div>
+
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="mathematics">Mat</span>
+            <input type="number" class="form-control" placeholder="{{result.mathematics}}" aria-describedby="sizing-addon1" ng-model="result.mathematics">
+        </div>
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="english">Eng</span>
+            <input type="number" class="form-control" placeholder="{{result.english}}" aria-describedby="english" ng-model="result.english">
+        </div>
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon " id="kiswahili">Kis</span>
+            <input type="number" class="form-control" placeholder="{{result.kiswahili}}" aria-describedby="kiswahili" ng-model="result.kiswahili">
+        </div>
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="physics">Phy</span>
+            <input type="number" class="form-control" placeholder="{{result.physics}}" aria-describedby="physics" ng-model="result.physics">
+        </div>
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon " id="chemistry">Che</span>
+            <input type="number" class="form-control" placeholder="{{result.chemistry}}" aria-describedby="chemistry" ng-model="result.chemistry">
+        </div>
+
+
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon " id="biology">Bio</span>
+            <input type="number" class="form-control" placeholder="{{result.biology}}" aria-describedby="physics" ng-model="result.biology">
+        </div>
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="history">His</span>
+            <input type="number" class="form-control" placeholder="{{result.history}}" aria-describedby="chemistry" ng-model="result.history">
+        </div>
+
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="religious_education"> Rel</span>
+            <input type="number" class="form-control" placeholder="{{result.religious_education}}" aria-describedby="religious_education" ng-model="result.religious_education">
+        </div>
+
+
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="agriculture">Agr</span>
+            <input type="number" class="form-control" placeholder="{{result.agriculture}}" aria-describedby="agriculture" ng-model="result.agriculture">
+        </div>
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon " id="business_studies">Bus</span>
+            <input type="number" class="form-control" placeholder="{{result.business_studies}}" aria-describedby="sizing-addon1" ng-model="result.business_studies">
+        </div>
+
+
+
+
+
+
+
+
+
+
+       <!-- <div class="input-group input-group-lg">
+            <span class="input-group-addon">Middle Name</span>
+            <select
+                    class="form-control input-lg"
+                    ng-model="result.middle_name"
+
+                    ng-options="value.last_name as value.last_name  group by value.second_name for value in students">
+
+                <option>--</option>
+            </select>
+        </div>-->
+
+
+
+
+        <!--<div >
+            <p>selected item is : {{selectedItem}}</p>
+            <select ng-model="patenity">
+                <option ng-repeat="patanety in parenities" value="{{patanety}}">{{patanety}}</option>
+            </select>
+        </div>-->
+
+
+        <!--<div>
+            <label>STUDENT</label>
+            <select
+                    class="form-control input-lg"
+                    ng-model="result.result"
+
+                    ng-options="value.name as value.last_name  group by value.first_name for value in results">
+
+                <option>--</option>
+            </select>
+        </div>
+-->
+
+
+
+
+
+
+
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <!-- result-detail.html: -->
+                <a ng-click="cancel()" class="btn btn-small btn-primary">cancel</a>
+
+
+                <!-- result-creation.html: -->
+                <a ng-click="updateResult()" class="btn btn-small btn-primary">Post result</a>
+            </div>
+        </div>
+    </form>
+</div>
