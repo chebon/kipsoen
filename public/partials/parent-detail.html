@@ -1,7 +1,45 @@
 <div class="container">
     <h1>Parent detail</h1>
 
-    <form novalidate="novalidate" class="form-horizontal">
+
+    <div ng-repeate="parent in parent">first name : {{parent.first_name}}</div>
+
+
+    <div ng-repeate="parent in parent">Second name : {{parent.second_name}}</div>
+
+    <div ng-repeate="parent in parent">Last name : {{parent.last_name}}</div>
+
+    <div ng-repeate="parent in parent"> phone Number : {{parent.phone_number}}</div>
+
+
+    <div ng-repeate="parent in parent"> ID Number : {{parent.id_number}}</div>
+
+    <div ng-repeate="parent in parent">  Occupation : {{parent.occupation}}</div>
+
+
+    <div ng-repeate="parent in parent">  Student : {{parent.student}}</div>
+
+
+    <div ng-repeate="parent in parent">  Parenity : {{parent.parenity}}</div>
+
+
+
+
+    <div class="control-group">
+        <div class="controls">
+
+            <a ng-click="cancel()" class="btn btn-small">Back</a>
+
+
+
+        </div>
+    </div>
+    </div>
+
+
+
+
+    <!--<form novalidate="novalidate" class="form-horizontal">
         <div class="control-group">
             <label class="control-label" for="inputFirstName">First name:</label>
             <div class="controls">
@@ -11,7 +49,7 @@
         <div class="control-group">
             <label class="control-label" for="inputLastName">second name:</label>
             <div class="controls">
-                <input type="text" id="inputLastName" ng-model="parent.second_name"/>
+                <input type="text" id="inputSecondName" ng-model="parent.second_name"/>
             </div>
         </div>
 
@@ -23,15 +61,7 @@
         </div>
 
 
-        <div class="control-group">
-            <div class="controls">
-                <!-- parent-detail.html: -->
-                <a ng-click="cancel()" class="btn btn-small">cancel</a>
-                <a ng-click="updateParent()" class="btn btn-small btn-primary">update parent</a>
 
-                <!-- parent-creation.html: -->
-                <a ng-click="createNewParent()" class="btn btn-small btn-primary">create new parent</a>
-            </div>
-        </div>
     </form>
 </div>
+-->

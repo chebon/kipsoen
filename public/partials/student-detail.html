@@ -21,55 +21,45 @@
 
 
 
+<div ng-repeate="students in student">
+    First name : {{student.first_name}}
 
 
-        <div class="form-group ">
-            <div class="col-xs-3 text-right">
-            <label class="control-label" for="inputFirstName">First name:</label>
-                </div>
-            <!--<div class="controls">-->
-            <div class="col-xs-9">
-                <input type="text" class="form-control" id="inputFirstName" ng-model="student.first_name"/>
-                </div>
-            <!--/div>-->
-        </div>
-        <div class="form-group">
-            <div class="col-xs-3 text-right">
-            <label class="control-label" for="second_name">second name:</label>
-                    </div>
-            <div class="col-xs-9">
-                <input type="text" class="form-control" id="second_name" ng-model="student.second_name"/>
-                </div>
+</div>
+
+
+        <div ng-repeate="students in student">
+
+
+            Second name : {{student.second_name}}
         </div>
 
-        <div class="form-group ">
-            <div class="col-xs-3 text-left">
-            <label class="control-label" for="last_name">last name:</label>
-                </div>
-            <div class="col-xs-9">
-                <input type="text" class="form-control" id="last_name" ng-model="student.last_name"/>
-            </div>
+
+        <div ng-repeate="students in student">
+
+
+            Last name : {{student.last_name}}
         </div>
 
-        <div class="form-horizontal " role="form">
-            <label class="control-label col-sm-2" for="inputFirstName">reg number:</label>
+        <div ng-repeate="students in student">
 
-            <input type="text" class="form-control" id="inputRegistrationNumber" ng-model="student.registration_number"/>
 
+            Second name : {{student.registration_number}}
         </div>
 
-        <div class="form-horizontal">
-            <label class="control-label col-sm-2" for="inputParent">parent :</label>
+        <div ng-repeate="students in student">
 
-                <input type="text" class="form-control" id="inputParent" ng-model="student.parent"/>
 
+            Second name : {{student.parent}}
         </div>
-        <div class="form-horizontal">
-            <label class="control-label col-sm-2" for="inputClass">class :</label>
 
-                <input type="text" class="form-control" id="inputClass" ng-model="student.class"/>
+        <div ng-repeate="students in student">
 
+
+            Second name : {{student.class}}
         </div>
+
+
 
 
 
@@ -79,20 +69,15 @@
 
         <div class="col-sm-10" class="control-group">
             <div class="controls">
-                <!-- student-detail.html: -->
-                <div class="col-sm-offset-1 col-sm-10">
-                <a ng-click="cancel()" class="btn btn-small btn-primary">cancel</a>
-                </div>
+
 
                 <div class="col-sm-offset-9 col-sm-10">
 
-                <a ng-click="updateStudent()" class="btn btn-small btn-primary">update student</a>
+                <a ng-click="parent(student.id)" class="btn btn-small btn-primary"> parent</a>
+
                     </div>
 
-                    <div class="col-sm-offset-3 col-sm-10">
-                <!-- student-creation.html: -->
-                <a ng-click="createNewStudent()" class="btn btn-small btn-primary">create new student</a>
-                        </div>
+
             </div>
         </div>
     </form>

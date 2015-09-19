@@ -24,29 +24,41 @@
 
         <div class="input-group input-group-lg">
             <span class="input-group-addon glyphicon glyphicon-user" id="second_name"></span>
-            <input type="text" class="form-control" placeholder="surname" aria-describedby="second_name" ng-model="student.second_name">
+            <input type="text" class="form-control" placeholder="surname" aria-describedby="second_name" ng-model="parent.second_name">
         </div>
 
 
         <div class="input-group input-group-lg">
             <span class="input-group-addon glyphicon glyphicon-user" id="last_name"></span>
-            <input type="text" class="form-control" placeholder="middle name" aria-describedby="last_name" ng-model="student.last_name">
+            <input type="text" class="form-control" placeholder="middle name" aria-describedby="last_name" ng-model="parent.last_name">
         </div>
 
 
 
         <div class="input-group input-group-lg">
             <span class="input-group-addon glyphicon glyphicon-user" id="email"></span>
-            <input type="text" class="form-control" placeholder="email" aria-describedby="email" ng-model="student.email">
+            <input type="text" class="form-control" placeholder="email" aria-describedby="email" ng-model="parent.email">
+        </div>
+
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon glyphicon glyphicon-user" id="id_number"></span>
+            <input type="number" class="form-control" placeholder="ID Number" aria-describedby="id_number" ng-model="parent.id_number">
+        </div>
+
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon glyphicon glyphicon-user" id="phone_number"></span>
+            <input type="number" class="form-control" placeholder="phone" aria-describedby="phone_number" ng-model="parent.phone_number">
         </div>
 
 
         <div class="input-group input-group-lg">
 
             <label>Parenity</label>
-            <select class="form-gropu input-lg">
+            <select class="form-group input-lg">
 
-                <option class="form-control input-lg" ng-repeat="patanety in parenities" value="{{patanety}}" ng-model="patanety">{{patanety}}</option>
+                <option class="form-control input-lg" ng-repeat="patanety in parenities" value="{{patanety}}" ng-model="parent.parenity">{{patanety}}</option>
             </select>
         </div>
 
@@ -57,7 +69,7 @@
                     class="form-control input-lg"
                     ng-model="parent.student"
 
-                    ng-options="value.name as value.last_name  group by value.first_name for value in students">
+                    ng-options="value.last_name as value.last_name  group by value.first_name for value in students">
 
                 <option>{{last_name }}</option>
             </select>

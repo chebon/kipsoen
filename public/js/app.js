@@ -35,5 +35,5 @@ kipsoen.config(['$routeProvider', function ($routeProvider) {
      $routeProvider.when('/entry-detail/:id', {templateUrl: 'partials/entry-detail.html', controller: 'EntryDetailCtrl'});
      $routeProvider.when('/entry-creation', {templateUrl: 'partials/entry-creation.html', controller: 'EntryCreationCtrl'});*/
 
-    $routeProvider.otherwise({redirectTo: '/student-list'});
+    $routeProvider.otherwise({redirectTo: '/home'});
 }]);

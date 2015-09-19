@@ -55,26 +55,18 @@
             <input type="text" class="form-control" placeholder="class " aria-describedby="class" ng-model="student.class">
         </div>
 
-        <!--<div >
-            <p>selected item is : {{selectedItem}}</p>
-            <select ng-model="patenity">
-                <option ng-repeat="patanety in parenities" value="{{patanety}}">{{patanety}}</option>
-            </select>
-        </div>-->
 
-
-        <!--<div>
-            <label>STUDENT</label>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon glyphicon glyphicon-user" >Parent</span>
             <select
                     class="form-control input-lg"
-                    ng-model="student.student"
+                    ng-model="student.parent"
 
-                    ng-options="value.name as value.last_name  group by value.first_name for value in students">
+                    ng-options="value.second_name as value.second_name  group by value.first_name for value in parents">
 
                 <option>--</option>
             </select>
         </div>
--->
 
 
 

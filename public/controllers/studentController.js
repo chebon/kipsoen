@@ -4,7 +4,7 @@
 
 
 
-var kipsoen = angular.module('StudentController', []);
+var kipsoen = angular.module('StudentController', ['ParentController']);
 
 kipsoen.controller('StudentListCtrl', ['$scope', 'StudentsFactory', 'StudentFactory', 'ExaminationFactory', '$location',
     function ($scope, StudentsFactory, StudentFactory, ExaminationFactory, $location) {
@@ -18,6 +18,10 @@ kipsoen.controller('StudentListCtrl', ['$scope', 'StudentsFactory', 'StudentFact
 
         $scope.result = function $email(studentId) {
             $location.path('/result-detail/' + studentId);
+        };
+
+        $scope.parent = function $email(studentId) {
+            $location.path('/parent-detail/' + studentId);
         };
 
         // callback for ng-click 'deleteStudent':
@@ -55,12 +59,18 @@ kipsoen.controller('StudentDetailCtrl', ['$scope', '$routeParams', 'StudentFacto
         };
 
         $scope.student = StudentFactory.show({id: $routeParams.id});
+
+        $scope.parent = function $email(studentId) {
+            $location.path('/parent-detail/' + studentId);
+        };
     }]);
 
-kipsoen.controller('StudentCreationCtrl', ['$scope', 'StudentsFactory', '$location',
-    function ($scope, StudentsFactory, $location) {
+kipsoen.controller('StudentCreationCtrl', ['$scope', 'StudentsFactory', 'ParentsFactory', '$location',
+    function ($scope, StudentsFactory, ParentsFactory, $location) {
 
         // callback for ng-click 'createNewStudent':
+
+        $scope.parents = ParentsFactory.query()
         $scope.createNewStudent = function () {
             StudentsFactory.create($scope.student);
             $location.path('/student-list');
