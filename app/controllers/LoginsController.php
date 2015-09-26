@@ -59,39 +59,55 @@ class LoginsController extends \BaseController {
 
             // echo 'logged in';
 
-            return Redirect::to('/index');
+          //  return Redirect::to('/index');
+
+
+
+
+            $user = Sentry::getUser();
+            $admin = Sentry::findGroupByName('teachers');
+            $users = Sentry::findGroupByName('students');
+            if ($user->inGroup($admin)) {
+                return Redirect::to('/results');
+
+               // echo "teachers";
+            } elseif ($user->inGroup($users)) {
+                return redirect()->intended('/students');
+
+                //echo "students";
+            }
 
         }
         catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
         {
             echo 'Login field is required.';
 
-            return Redirect::to('/');
+           // return Redirect::to('/');
         }
         catch (Cartalyst\Sentry\Users\PasswordRequiredException $e)
         {
             echo 'Password field is required.';
 
-            return Redirect::to('/');
+           // return Redirect::to('/');
         }
         catch (Cartalyst\Sentry\Users\WrongPasswordException $e)
         {
             echo 'Wrong password, try again.';
 
-            return Redirect::to('/');
+           // return Redirect::to('/');
 
         }
         catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
         {
             echo 'User was not found.';
 
-            return Redirect::to('/');
+            //return Redirect::to('/');
         }
         catch (Cartalyst\Sentry\Users\UserNotActivatedException $e)
         {
             echo 'User is not activated.';
 
-            return Redirect::to('/');
+           // return Redirect::to('/');
         }
 
 // The following is only required if the throttling is enabled
@@ -99,13 +115,13 @@ class LoginsController extends \BaseController {
         {
             echo 'User is suspended.';
 
-            return Redirect::to('/');
+           // return Redirect::to('/');
         }
         catch (Cartalyst\Sentry\Throttling\UserBannedException $e)
         {
             echo 'User is banned.';
 
-            return Redirect::to('/');
+          //  return Redirect::to('/');
         }
 
 	}

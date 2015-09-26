@@ -36,6 +36,22 @@ class StudentsController extends \BaseController {
 
         Student::create($data);
 
+
+        $email=Input::get('email');
+
+        $user =  Sentry::createUser(array(
+            'email'=> $email,
+            'password'=> 'password123',
+            'activated' => true,
+        ));
+
+        $user = Sentry::findUserByLogin($email);
+
+        $group = Sentry::findGroupByName('students');
+
+
+        $user->addGroup($group);
+
         return Response::json(array('success' => true));
 
 	}
@@ -79,6 +95,15 @@ class StudentsController extends \BaseController {
         $student = Student::findorFail($id);
         $data = Input::all();
         $student->update($data);
+
+
+        $user = Sentry::findUserById($id);
+
+         $group = Sentry::findGroupByName('students');
+
+
+        $user->addGroup($group);
+
         return Response::json(array('success' => true));
 	}
 

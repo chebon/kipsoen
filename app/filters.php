@@ -122,7 +122,7 @@ Route::filter('guest', function()
 });
 
 /*
-|--------------------------------------------------------------------------
+|-----------------------------------------------1---------------------------
 | CSRF Protection Filter
 |--------------------------------------------------------------------------
 |
@@ -141,10 +141,28 @@ Route::filter('csrf', function()
 });
 
 
-Route::filter('auth.bonche', function()
+/*Route::filter('auth.bonche', function()
 {
     if ( ! Sentry::check())
     {
         return Redirect::route('/try');
     }
+});*/
+
+
+
+Route::filter('teacher', function()
+{
+    $user = Sentry::getUser();
+    $admin = Sentry::findGroupByName('teachers');
+
+    if ( ! Sentry::check())
+    {
+        return Redirect::route('/logins');
+    }
 });
+
+
+
+
+

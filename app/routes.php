@@ -12,36 +12,62 @@
 */
 
 
-Route::get('/try', function()
+Route::get('/', function()
 {
     return View::make('hello');
 });
 
+Route::get('/student', function()
+{
+    return View::make('index');
+});
 
 
-Route::get('/', function()
+
+
+Route::get('/teacher', function()
 {
 	return View::make('validations');
 });
+
+
+Route::get('/parent', function()
+{
+    return View::make('parent');
+});
+
 
 Route::group(array( 'before' => 'auth'), function()
 {
 
 Route::resource('students', 'StudentsController');
 
+});
+
+
+
+Route::group(array( 'before' => 'teacher'), function()
+{
+
+    Route::resource('results', 'ResultsController');
+
+});
+
 Route::resource('teachers', 'TeachersController');
 
 //Route::resource('parents', 'ParentsController');
 
-Route::resource('parent', 'ParentTestsController');
+Route::resource('parents', 'ParentTestsController');
 
-Route::resource('results', 'ResultsController');
+
 
 
 
 Route::resource('create', 'CreatesController');
 
 Route::resource('group', 'GroupsController');
+
+Route::resource('examinations', 'ExaminationsController');
 
 Route::resource('groupassignments', 'GroupassignmentsController');
 
@@ -54,13 +80,10 @@ Route::resource('ambenges', 'AmbengesController');
 
 
 
+
   //  Route::resource('teachers', 'teachers');
 
-    Route::get('/index', function()
-    {
-        return View::make('index');
-    });
-});
+
 
 
 
@@ -68,10 +91,17 @@ Route::resource('ambenges', 'AmbengesController');
 Route::resource('login', 'LoginsController');
 
 
-Route::get('/login', function()
+Route::get('/logins', function()
 {
     return View::make('index_0ne');
 });
 
 
-Route::resource('examinations', 'ExaminationsController');
+
+
+
+
+Route::get('/logout', function()
+{
+    Sentry::logout();
+});

@@ -44,6 +44,13 @@ class ParentTestsController extends \BaseController {
             'activated' => true,
         ));
 
+        $user = Sentry::findUserByLogin($email);
+
+        $group = Sentry::findGroupByName('parents');
+
+
+        $user->addGroup($group);
+
 
         return Response::json(array('success' => true));
 	}
@@ -86,7 +93,20 @@ class ParentTestsController extends \BaseController {
 	{
 		$parent = ParentTest::findorfail($id);
         $data = Input::all();
+
+
         $parent->update($data);
+
+        $email=Input::get('email');
+
+
+        $user = Sentry::findUserByLogin($email);
+
+        $group = Sentry::findGroupByName('parents');
+
+
+        $user->addGroup($group);
+
         return Response::json(array('success' => true));
 
 	}

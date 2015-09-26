@@ -42,7 +42,16 @@ class TeachersController extends \BaseController {
         Sentry::register(array(
             'email'=> $email,
             'password'=> 'teacher123',
+            'activated' => true,
         ));
+
+
+        $user = Sentry::findUserByLogin($email);
+
+        $group = Sentry::findGroupByName('teachers');
+
+
+        $user->addGroup($group);
 	}
 
 	/**
@@ -83,6 +92,17 @@ class TeachersController extends \BaseController {
 		$teacher = Teacher::findorfail($id);
         $data = Input::all();
         $teacher->update($data);
+
+        $email=Input::get('email');
+
+
+        $user = Sentry::findUserByLogin($email);
+
+        $group = Sentry::findGroupByName('teachers');
+
+
+        $user->addGroup($group);
+
         return Response::json(array('success' => true));
 	}
 
