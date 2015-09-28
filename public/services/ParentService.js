@@ -7,14 +7,14 @@
 var kipsoen = angular.module('parentService', ['ngResource']);
 
 kipsoen.factory('ParentsFactory', function ($resource) {
-    return $resource('/parent', {}, {
+    return $resource('/parents', {}, {
         query: { method: 'GET', isArray: true },
         create: { method: 'POST' }
     })
 });
 
 kipsoen.factory('ParentFactory', function ($resource) {
-    return $resource('/parent/:id', {}, {
+    return $resource('/parents/:id', {}, {
         show: { method: 'GET' },
         update: { method: 'PUT', params: {id: '@id'} },
         delete: { method: 'DELETE', params: {id: '@id'} }

@@ -70,6 +70,8 @@ kipsoen.controller('StudentCreationCtrl', ['$scope', 'StudentsFactory', 'Parents
 
         // callback for ng-click 'createNewStudent':
 
+        $scope.classes = ['north', 'south'] ;
+
         $scope.parents = ParentsFactory.query()
         $scope.createNewStudent = function () {
             StudentsFactory.create($scope.student);

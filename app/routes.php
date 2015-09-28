@@ -51,11 +51,13 @@ Route::group(array( 'before' => 'teacher'), function()
 
     Route::resource('results', 'ResultsController');
 
+    Route::resource('examinations', 'ExaminationsController');
+
 });
 
 Route::resource('teachers', 'TeachersController');
 
-//Route::resource('parents', 'ParentsController');
+
 
 Route::resource('parents', 'ParentTestsController');
 
@@ -67,21 +69,20 @@ Route::resource('create', 'CreatesController');
 
 Route::resource('group', 'GroupsController');
 
-Route::resource('examinations', 'ExaminationsController');
 
-Route::resource('groupassignments', 'GroupassignmentsController');
+Route::resource('images', 'ImagesController');
+
+
+
+/*Route::resource('groupassignments', 'GroupassignmentsController');
 
 Route::resource('useractiviations', 'UseractiviationsController');
 
 Route::resource('ambenges', 'AmbengesController');
 
     Route::resource('create', 'CreatesController');
-
-
-
-
-
-  //  Route::resource('teachers', 'teachers');
+Route::resource('ambenges', 'AmbengesController');
+*/
 
 
 

@@ -51,10 +51,32 @@
         </div>
 
         <div class="input-group input-group-lg">
+
+            <span class="input-group-addon glyphicon glyphicon-user" >class</span>
+            <select class="form-group input-lg">
+
+                <option class="form-control input-lg" ng-repeat="class in classes" value="{{class}}" ng-model="student.class">{{class}}</option>
+            </select>
+        </div>
+
+        <div class="btn-group dropup">
+            <button type="button" class="btn btn-default">Claass </button>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu " ng-repeat="class in classes"   ng-model="student.class">
+                <!-- Dropdown menu links -->
+
+               {{class}}
+            </ul>
+        </div>
+
+     <!--   <div class="input-group input-group-lg">
             <span class="input-group-addon glyphicon glyphicon-education" id="class"></span>
             <input type="text" class="form-control" placeholder="class " aria-describedby="class" ng-model="student.class">
         </div>
-
+-->
 
         <div class="input-group input-group-lg">
             <span class="input-group-addon glyphicon glyphicon-user" >Parent</span>

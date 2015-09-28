@@ -164,5 +164,32 @@ Route::filter('teacher', function()
 
 
 
+Route::filter('parent', function()
+{
+    $user = Sentry::getUser();
+    $admin = Sentry::findGroupByName('parents');
+
+    if ( ! Sentry::check())
+    {
+        return Redirect::route('/logins');
+    }
+});
+
+
+
+Route::filter('student', function()
+{
+    $user = Sentry::getUser();
+    $admin = Sentry::findGroupByName('students');
+
+    if ( ! Sentry::check())
+    {
+        return Redirect::route('/logins');
+    }
+});
+
+
+
+
 
 

@@ -1,21 +1,21 @@
 <?php
 
-class AmbengesController extends \BaseController {
+class ImagesController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
-	 * GET /ambenges
+	 * GET /images
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-		echo "hello world";
+        return Response::json(Images::get());
 	}
 
 	/**
 	 * Show the form for creating a new resource.
-	 * GET /ambenges/create
+	 * GET /images/create
 	 *
 	 * @return Response
 	 */
@@ -26,39 +26,38 @@ class AmbengesController extends \BaseController {
 
 	/**
 	 * Store a newly created resource in storage.
-	 * POST /ambenges
+	 * POST /images
 	 *
 	 * @return Response
 	 */
 	public function store()
 	{
-		$data = Input::get('registration_number');
+        $name=Input::get('name');
+        // $path = "public/";
 
-        $student = Student::findorFail($data);
+        Image::make(Input::file('photo'))->resize(1900, 1080)->save("public/".$name);
 
-        return $student;
+        $data = Input::all();
+        Images::create($data);
 
-
+        return Response::json(array('success' => true));
 	}
 
 	/**
 	 * Display the specified resource.
-	 * GET /ambenges/{id}
+	 * GET /images/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
 	public function show($id)
 	{
-        $columns = Input::get('registration_number');
-        $student = Student::findorfail($columns);
-
-        return $student;
+		//
 	}
 
 	/**
 	 * Show the form for editing the specified resource.
-	 * GET /ambenges/{id}/edit
+	 * GET /images/{id}/edit
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -70,7 +69,7 @@ class AmbengesController extends \BaseController {
 
 	/**
 	 * Update the specified resource in storage.
-	 * PUT /ambenges/{id}
+	 * PUT /images/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -82,7 +81,7 @@ class AmbengesController extends \BaseController {
 
 	/**
 	 * Remove the specified resource from storage.
-	 * DELETE /ambenges/{id}
+	 * DELETE /images/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response

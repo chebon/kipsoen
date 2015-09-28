@@ -134,15 +134,8 @@ class LoginsController extends \BaseController {
 	 * @return Response
 	 */
 	public function show($id)
-	{
-        $user = Sentry::findUserById($id);
-
-        Sentry::logout();
-
-        return Redirect::to('/');
-
-        //return $user;
-	}
+    {
+    }
 
 	/**
 	 * Show the form for editing the specified resource.
