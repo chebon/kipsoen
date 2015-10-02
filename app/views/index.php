@@ -66,7 +66,7 @@
 <footer>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-0>
+            <div class="col-md-0">
                 <span class="copyright">Copyright &copy; bonche  2015</span>
             </div>
 <!--            <div class="col-md-4">

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="homepage">
+<html lang="en">
 
 <head>
 
@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>HOMEPAGE    </title>
+    <title>Homepage</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -24,15 +24,9 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script src="/angular/angular.js"></script>
-    <script src="js/image.js"></script>
-    <script
-
-        src="angular/angular-cookies.js"
-    ></script>
 </head>
 
-<body ng-controller="images">
+<body>
 
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -51,10 +45,10 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="#">About</a>
+                    <a href="/about">About</a>
                 </li>
                 <li>
-                    <a href="#">Services</a>
+                    <a href="/login">Login</a>
                 </li>
                 <li>
                     <a href="#">Contact</a>
@@ -74,35 +68,53 @@
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
-<div ng-repeat="image in images">
-    <!-- Wrapper for Slides -->
-    <div class="carousel-inner" >
-        <div class="item active">
-            <!-- Set the first background image using inline CSS below. -->
 
-            <img class="slide-image" src="{{image.name}}" alt="">
-           <!-- <div class="fill" style="background-image:url(/{{image.name}});"></div>-->
-            <div class="carousel-caption">
-                <h2>Caption 1</h2>
+    <!-- Wrapper for Slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="carousel-caption col-md-4">
+                <h1>vision</h1>
+                <h2>art of peer pressure</h2>
             </div>
+
+            <div class="carousel-caption col-md-12">
+                <h1>mission</h1>
+                <h2>art of peer pressure</h2>
+            </div>
+            <!-- Set the first background image using inline CSS below. -->
+            <div class="fill" style="background-image:url('/first');"></div>
+           <!-- <div class="carousel-caption">
+                <h2>Caption 1 sarta</h2>
+                <h1>Caption 1 sarta</h1>
+            </div>-->
         </div>
         <div class="item">
             <!-- Set the second background image using inline CSS below. -->
-            <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
-            <div class="carousel-caption">
-                <h2>Caption 2</h2>
+            <div class="fill" style="background-image:url('/second');"></div>
+            <div class="carousel-caption col-md-4">
+                <h1>vision</h1>
+                <h2>art of peer pressure</h2>
+            </div>
+
+            <div class="carousel-caption col-md-12">
+                <h1>mission</h1>
+                <h2>art of peer pressure</h2>
             </div>
         </div>
         <div class="item">
             <!-- Set the third background image using inline CSS below. -->
-            <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
-            <div class="carousel-caption">
-                <h2>Caption 3</h2>
+            <div class="fill" style="background-image:url('/third');"></div>
+            <div class="carousel-caption col-md-4">
+                <h1>vision</h1>
+                <h2>art of peer pressure</h2>
+            </div>
+
+            <div class="carousel-caption col-md-12">
+                <h1>mission</h1>
+                <h2>this is the nission </h2>
             </div>
         </div>
     </div>
-
-</div>
 
     <!-- Controls -->
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -114,29 +126,10 @@
 
 </header>
 
-<!-- Page Content -->
-<div class="container">
 
-    <div class="row">
-        <div class="col-lg-12">
-            <h1>Half Slider by Start Bootstrap</h1>
-            <p>The background images for the slider are set directly in the HTML using inline CSS. The rest of the styles for this template are contained within the <code>half-slider.css</code>file.</p>
-        </div>
-    </div>
 
-    <hr>
 
-    <!-- Footer -->
-    <footer>
-        <div class="row">
-            <div class="col-lg-12">
-                <p>Copyright &copy; Your Website 2014</p>
-            </div>
-        </div>
-        <!-- /.row -->
-    </footer>
 
-</div>
 <!-- /.container -->
 
 <!-- jQuery -->

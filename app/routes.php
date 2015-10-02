@@ -92,9 +92,9 @@ Route::resource('ambenges', 'AmbengesController');
 Route::resource('login', 'LoginsController');
 
 
-Route::get('/logins', function()
+Route::get('/about', function()
 {
-    return View::make('index_0ne');
+    return View::make('about');
 });
 
 

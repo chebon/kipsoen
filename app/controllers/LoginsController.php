@@ -12,9 +12,11 @@ class LoginsController extends \BaseController {
 	{
 		//echo 'welcome you are loged in this is the index function';
 
-        return Redirect::to('/index');
+        /*return Redirect::to('/index');*/
 
         //return View::make('sessions.login');
+
+        return View::make('index_0ne');
 	}
 
 	/**
