@@ -71,6 +71,7 @@ Route::resource('group', 'GroupsController');
 
 
 Route::resource('images', 'ImagesController');
+Route::resource('announcements', 'AnnouncementsController');
 
 
 
@@ -80,9 +81,11 @@ Route::resource('useractiviations', 'UseractiviationsController');
 
 Route::resource('ambenges', 'AmbengesController');
 
-    Route::resource('create', 'CreatesController');
+
 Route::resource('ambenges', 'AmbengesController');
 */
+
+Route::resource('create', 'CreatesController');
 
 
 
@@ -94,7 +97,7 @@ Route::resource('login', 'LoginsController');
 
 Route::get('/about', function()
 {
-    return View::make('about');
+    return View::make('test');
 });
 
 

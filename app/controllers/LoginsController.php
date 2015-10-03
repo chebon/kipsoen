@@ -16,7 +16,7 @@ class LoginsController extends \BaseController {
 
         //return View::make('sessions.login');
 
-        return View::make('index_0ne');
+        return View::make('test');
 	}
 
 	/**
@@ -58,8 +58,7 @@ class LoginsController extends \BaseController {
             $user = Sentry::authenticateAndRemember($credentials, false);
 
             //AndRemember
-
-            // echo 'logged in';
+                 echo 'logged in';
 
           //  return Redirect::to('/index');
 
@@ -84,32 +83,32 @@ class LoginsController extends \BaseController {
         {
             echo 'Login field is required.';
 
-           // return Redirect::to('/');
+          return Redirect::to('/login');
         }
         catch (Cartalyst\Sentry\Users\PasswordRequiredException $e)
         {
             echo 'Password field is required.';
 
-           // return Redirect::to('/');
+            return Redirect::to('/login');
         }
         catch (Cartalyst\Sentry\Users\WrongPasswordException $e)
         {
             echo 'Wrong password, try again.';
 
-           // return Redirect::to('/');
+            return Redirect::to('/login');
 
         }
         catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
         {
             echo 'User was not found.';
 
-            //return Redirect::to('/');
+            return Redirect::to('/login');
         }
         catch (Cartalyst\Sentry\Users\UserNotActivatedException $e)
         {
             echo 'User is not activated.';
 
-           // return Redirect::to('/');
+            return Redirect::to('/login');
         }
 
 // The following is only required if the throttling is enabled
@@ -117,13 +116,13 @@ class LoginsController extends \BaseController {
         {
             echo 'User is suspended.';
 
-           // return Redirect::to('/');
+            return Redirect::to('/login');
         }
         catch (Cartalyst\Sentry\Throttling\UserBannedException $e)
         {
             echo 'User is banned.';
 
-          //  return Redirect::to('/');
+            return Redirect::to('/login');
         }
 
 	}
