@@ -42,7 +42,7 @@
 									</div>
 									<div class="form-group">
 										<div class="row">
-											<div class="col-sm-6 col-sm-offset-3">
+											<div class="col-sm-4 col-sm-offset-3">
 												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
 											</div>
 										</div>
@@ -67,6 +67,12 @@
                                         </div>
                                     </div>
 								</form>
+
+
+                                <div class="col-md-offset-3"> new
+
+                                    <div class="col-md-6">new2</div>
+                                </div>
 								<form id="register-form" action="/students" method="post" role="form" style="display: none;">
 									<div class="form-group">
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
@@ -95,5 +101,34 @@
 			</div>
 		</div>
 	</div>
+
+
+<div >
+    <div class="col-sm-6 col-md-3">
+        <a href="#" class="thumbnail">
+            <img src="/first"
+                 alt="Generic placeholder thumbnail">
+        </a>
+    </div>
+    <div class="col-sm-6 col-md-3">
+        <a href="#" class="thumbnail">
+            <img src="/second"
+                 alt="Generic placeholder thumbnail">
+        </a>
+    </div>
+    <div class="col-sm-6 col-md-3">
+        <a href="#" class="thumbnail">
+            <img src="/third"
+                 alt="Generic placeholder thumbnail">
+        </a>
+    </div>
+    <div class="col-sm-6 col-md-3">
+        <a href="#" class="thumbnail">
+            <img src="/first"
+                 alt="Generic placeholder thumbnail">
+        </a>
+    </div>
+</div>
+
 
 <html>

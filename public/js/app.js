@@ -4,7 +4,7 @@
 
 
 var kipsoen = angular.module('kipsoen', ['ngRoute', 'StudentController', 'studentService', "TeacherController", "teacherService",
-"parentService", "ParentController", 'resultService', 'ResultController', 'examinationService', 'ExaminationController']);
+"parentService", "ParentController", 'resultService', 'ResultController', 'examinationService', 'ExaminationController', "announcementService", "AnnouncementController"]);
 
 
 kipsoen.config(['$routeProvider', function ($routeProvider) {
@@ -31,9 +31,9 @@ kipsoen.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/result-detail/:id', {templateUrl: 'partials/result-detail.html', controller: 'ResultDetailCtrl'});
     $routeProvider.when('/result-creation', {templateUrl: 'partials/result-creation.html', controller: 'ResultCreationCtrl'});
 
-    /* $routeProvider.when('/entry-list', {templateUrl: 'partials/entry-list.html', controller: 'EntryListCtrl'});
-     $routeProvider.when('/entry-detail/:id', {templateUrl: 'partials/entry-detail.html', controller: 'EntryDetailCtrl'});
-     $routeProvider.when('/entry-creation', {templateUrl: 'partials/entry-creation.html', controller: 'EntryCreationCtrl'});*/
+     $routeProvider.when('/announcement-list', {templateUrl: 'partials/announcement-list.html', controller: 'AnnouncementListCtrl'});
+     $routeProvider.when('/announcement-detail/:id', {templateUrl: 'partials/announcement-detail.html', controller: 'AnnouncementDetailCtrl'});
+     $routeProvider.when('/announcement-creation', {templateUrl: 'partials/announcement-creation.html', controller: 'AnnouncementCreationCtrl'});
 
     $routeProvider.otherwise({redirectTo: '/home'});
 }]);

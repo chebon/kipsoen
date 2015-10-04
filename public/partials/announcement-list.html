@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style >div.bonche
+    {
+        padding-top: 1cm;
+        padding-bottom: 1cm;
+    }
+    </style>
+</head>
+<body>
+
+
+
+<div class="bonche">
+    <a ng-click="createNewAnnouncement()" class="btn btn-primary">new announcement</a>
+</div>
+
+<div class="col-md-4" >
+    <h2></h2>
+    <div ng-repeat="ann in announcements">
+        <h3>{{ ann.name }}  </h3>
+        <h3>{{ ann.date }}</h3>
+        <p>{{ ann.info }}</p>
+        <a ng-click="editAnnouncement(announcement.id)" class="btn btn-small btn-success">edit</a>
+
+    </div>
+</div>
+</body>
+</html>

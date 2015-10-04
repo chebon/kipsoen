@@ -52,6 +52,9 @@ class StudentsController extends \BaseController {
 
         $user->addGroup($group);
 
+
+        Result::create($data);
+
         return Response::json(array('success' => true));
 
 	}

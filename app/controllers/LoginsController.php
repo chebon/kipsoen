@@ -16,7 +16,13 @@ class LoginsController extends \BaseController {
 
         //return View::make('sessions.login');
 
-        return View::make('test');
+       return View::make('test');
+
+
+
+
+
+
 	}
 
 	/**
@@ -58,24 +64,35 @@ class LoginsController extends \BaseController {
             $user = Sentry::authenticateAndRemember($credentials, false);
 
             //AndRemember
-                 echo 'logged in';
+                // echo 'logged in';
 
           //  return Redirect::to('/index');
 
 
 
 
-            $user = Sentry::getUser();
+            $userget = Sentry::getUser();
             $admin = Sentry::findGroupByName('teachers');
             $users = Sentry::findGroupByName('students');
-            if ($user->inGroup($admin)) {
-                return Redirect::to('/results');
+            $hod = Sentry::findGroupByName('HOD');
+            if ($userget->inGroup($admin)) {
 
-               // echo "teachers";
+
+              // echo "teachers";
+                return Redirect::to('/teacher');
+
+
             } elseif ($user->inGroup($users)) {
-                return redirect()->intended('/students');
 
-                //echo "students";
+
+                echo "students";
+            }
+
+            elseif ($user->inGroup($hod)) {
+
+                return Redirect::to('/HOD');
+
+                //echo "HOD";
             }
 
         }

@@ -12,6 +12,7 @@
     <script src="angular/angular-resource.js"></script>
     <script src="js/app.js"></script>
     <script src="controllers/Examination.js"></script>
+    <script src="controllers/announcements.js"></script>
     <script src="controllers/studentController.js"></script>
     <script src="services/StudentService.js"></script>
     <script src="controllers/teacherController.js"></script>
@@ -21,6 +22,7 @@
     <script src="controllers/ResultController.js"></script>
     <script src="services/ResultService.js"></script>
     <script src="services/ExaminationService.js"></script>
+    <script src="services/AnnouncementService.js"></script>
     <script scr="js/route-styles.js"></script>
 
 
@@ -29,23 +31,27 @@
 
 <div id="background">
     <div class="spicy">
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
 
-        <div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="teacher#/student-list">Students</a></li>
-                <li><a href="teacher#/result-list">Results</a></li>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="HOD#/student-list">Students</a></li>
+                        <li><a href="HOD#/result-list">Results</a></li>
+                        <li><a href="HOD#/examination-list">Examinations</a></li>
+                        <li><a href="HOD#/announcement-list">Announcements</a></li>
 
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
 
-                <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> logout</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
     </div>
 

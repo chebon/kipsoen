@@ -1,6 +1,4 @@
-<div class="container">
-    <a ng-click="createNewResult()" class="btn btn-info">new result</a>
-</div>
+
 <div class="container">
 
 
@@ -37,7 +35,7 @@
             <th st-sort="firstName">first name</th>
             <th st-sort="lastName">last name</th>
             <th st-sort="second_name">second name</th>
-            <th st-sort="phone_number">phone number</th>
+            <th st-sort="phone_number">Registration number</th>
             <th st-sort="actions">actions</th>
         </tr>
 
@@ -48,12 +46,13 @@
             <td>{{ result.first_name }}</td>
             <td>{{ result.last_name }}</td>
             <td>{{ result.second_name }}</td>
-            <td>{{ result.phone_number }}</td>
+            <td>{{ result.registration_number }}</td>
 
             <!-- <td>{{ result.class }}</td>-->
             <td>
-                <a ng-click="editResult(result.id)" class="btn btn-info">info</a>
-                <a ng-click="deleteResult(result.id)" class="btn btn-small btn-danger">delete</a>
+                <a ng-click="editResult(result.id)" class="btn btn-primary">Enter</a>
+                <a ng-click="viewResult(result.id)" class="btn btn-info">view</a>
+
             </td>
         </tr>
         </tbody>

@@ -30,6 +30,11 @@ Route::get('/teacher', function()
 	return View::make('validations');
 });
 
+Route::get('/HOD', function()
+{
+    return View::make('hod');
+});
+
 
 Route::get('/parent', function()
 {
@@ -65,7 +70,7 @@ Route::resource('parents', 'ParentTestsController');
 
 
 
-Route::resource('create', 'CreatesController');
+
 
 Route::resource('group', 'GroupsController');
 
@@ -85,9 +90,15 @@ Route::resource('ambenges', 'AmbengesController');
 Route::resource('ambenges', 'AmbengesController');
 */
 
-Route::resource('create', 'CreatesController');
 
 
+
+Route::group(array( 'before' => 'HOD'), function()
+{
+    Route::resource('create', 'CreatesController');
+
+
+});
 
 
 
@@ -108,4 +119,12 @@ Route::get('/about', function()
 Route::get('/logout', function()
 {
     Sentry::logout();
+
+    return Redirect::to('/');
+});
+
+
+Route::get('/try', function()
+{
+    return View::make('index_0ne');
 });

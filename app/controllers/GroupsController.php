@@ -10,10 +10,11 @@ class GroupsController extends \BaseController {
 	 */
 	public function index()
 	{
-        $groups = Sentry::findAllGroups();
+        $user = Sentry::getUserProvider()->findById(1);
 
-        return $groups;
-	}
+        return $user;
+
+    }
 
 	/**
 	 * Show the form for creating a new resource.
@@ -34,25 +35,18 @@ class GroupsController extends \BaseController {
 	 */
 	public function store()
 	{
-        try
-        {
-            $name=Input::get('name');
-            $group = Sentry::createGroup(array(
-                'name'        => $name,
-                'permissions' => array(
-                    'admin' => 1,
-                    'users' => 1,
-                ),
-            ));
-        }
-        catch (Cartalyst\Sentry\Groups\NameRequiredException $e)
-        {
-            echo 'Name field is required';
-        }
-        catch (Cartalyst\Sentry\Groups\GroupExistsException $e)
-        {
-            echo 'Group already exists';
-        }
+
+    $email = Input::get('email');
+        $groupName = Input::get('name');
+
+
+        $user = Sentry::findUserByLogin($email);
+
+        $group = Sentry::findGroupByName($groupName);
+
+
+        $user->addGroup($group);
+        //return $group;
 	}
 
 	/**
@@ -64,9 +58,15 @@ class GroupsController extends \BaseController {
 	 */
 	public function show($id)
 	{
-        $group = Sentry::findGroupById($id);
+        $user = Sentry::getUserProvider()->findById($id);
 
-        return $group;
+        //return $user;
+
+        $groups = $user->getGroups();
+
+        return $groups;
+
+
 	}
 
 	/**

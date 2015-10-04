@@ -46,7 +46,9 @@ class AnnouncementsController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+        $announcement = Announcement::findorfail($id);
+
+        return $announcement;
 	}
 
 	/**

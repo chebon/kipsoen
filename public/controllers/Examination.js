@@ -48,9 +48,12 @@ kipsoen.controller('ExaminationCreationCtrl', ['$scope', 'ExaminationsFactory', 
     function ($scope, ExaminationsFactory, StudentsFactory, $location) {
 
 
-        $scope.students = StudentsFactory.query();
+        $scope.cancel = function () {
+            $location.path('/examination-list');
+        };
 
-        $scope.parenities = ['father', 'mother', 'guardian']
+
+
 
         // callback for ng-click 'createNewExamination':
         $scope.createNewExamination = function () {

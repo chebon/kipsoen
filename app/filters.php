@@ -176,6 +176,14 @@ Route::filter('parent', function()
 });
 
 
+Route::filter('HOD', function()
+{
+   // Sentry::getUser()->addGroup( Sentry::getGroupProvider()->findByName('HOD') );
+
+
+});
+
+
 
 Route::filter('student', function()
 {
@@ -186,6 +194,8 @@ Route::filter('student', function()
     {
         return Redirect::route('/logins');
     }
+
+
 });
 
 
