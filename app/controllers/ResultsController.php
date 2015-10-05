@@ -43,9 +43,9 @@ class ResultsController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($student_id)
+	public function show($id)
 	{
-		$result = Result::findorfail($student_id);
+		$result = Result::findorfail($id);
 
         return $result;
 	}

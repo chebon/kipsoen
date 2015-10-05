@@ -44,8 +44,8 @@ kipsoen.controller('StudentListCtrl', ['$scope', 'StudentsFactory', 'StudentFact
         $scope.students = StudentsFactory.query();
     }]);
 
-kipsoen.controller('StudentDetailCtrl', ['$scope', '$routeParams', 'StudentFactory', '$location',
-    function ($scope, $routeParams, StudentFactory, $location) {
+kipsoen.controller('StudentDetailCtrl', ['$scope', '$routeParams', "ParentsFactory", 'StudentFactory', '$location',
+    function ($scope, $routeParams, ParentsFactory, StudentFactory, $location) {
 
         // callback for ng-click 'updateStudent':
         $scope.updateStudent = function () {
@@ -63,6 +63,10 @@ kipsoen.controller('StudentDetailCtrl', ['$scope', '$routeParams', 'StudentFacto
         $scope.parent = function $email(studentId) {
             $location.path('/parent-detail/' + studentId);
         };
+
+        $scope.parents = ParentsFactory.query();
+
+        $scope.classes = ['north', 'south'] ;
     }]);
 
 kipsoen.controller('StudentCreationCtrl', ['$scope', 'StudentsFactory', 'ParentsFactory', '$location',
@@ -76,5 +80,11 @@ kipsoen.controller('StudentCreationCtrl', ['$scope', 'StudentsFactory', 'Parents
         $scope.createNewStudent = function () {
             StudentsFactory.create($scope.student);
             $location.path('/student-list');
+
+
         }
+
+        $scope.cancel = function () {
+            $location.path('/student-list');
+        };
     }]);

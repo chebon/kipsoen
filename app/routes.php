@@ -19,7 +19,7 @@ Route::get('/', function()
 
 Route::get('/student', function()
 {
-    return View::make('index');
+    return View::make('student');
 });
 
 
@@ -54,11 +54,15 @@ Route::resource('students', 'StudentsController');
 Route::group(array( 'before' => 'teacher'), function()
 {
 
-    Route::resource('results', 'ResultsController');
 
-    Route::resource('examinations', 'ExaminationsController');
 
 });
+
+Route::resource('studentResults', 'StudentResultsController');
+
+Route::resource('results', 'ResultsController');
+
+Route::resource('examinations', 'ExaminationsController');
 
 Route::resource('teachers', 'TeachersController');
 
@@ -80,6 +84,7 @@ Route::resource('announcements', 'AnnouncementsController');
 
 
 
+
 /*Route::resource('groupassignments', 'GroupassignmentsController');
 
 Route::resource('useractiviations', 'UseractiviationsController');
@@ -90,7 +95,7 @@ Route::resource('ambenges', 'AmbengesController');
 Route::resource('ambenges', 'AmbengesController');
 */
 
-
+Route::resource('secretaries', 'SecretariesController');
 
 
 Route::group(array( 'before' => 'HOD'), function()
@@ -99,6 +104,16 @@ Route::group(array( 'before' => 'HOD'), function()
 
 
 });
+
+
+Route::get('/secretary', function()
+{
+
+    return View::make('secretary');
+
+});
+
+
 
 
 

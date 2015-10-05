@@ -47,6 +47,11 @@ kipsoen.controller('ParentCreationCtrl', ['$scope', 'ParentsFactory', 'StudentsF
     function ($scope, ParentsFactory, StudentsFactory, $location) {
 
 
+        $scope.cancel = function () {
+            $location.path('/parent-list');
+        };
+
+
         $scope.students = StudentsFactory.query();
 
         $scope.parenities = ['father', 'mother', 'guardian']

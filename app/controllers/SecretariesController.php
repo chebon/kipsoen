@@ -1,21 +1,25 @@
 <?php
 
-class StudentsController extends \BaseController {
+class SecretariesController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
-	 * GET /students
+	 * GET /secretaries
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-		return Response::json(Student::get());
+        //return View::make('secretary');
+
+        return Response::json(Secretary::get());
+
+
 	}
 
 	/**
 	 * Show the form for creating a new resource.
-	 * GET /students/create
+	 * GET /secretaries/create
 	 *
 	 * @return Response
 	 */
@@ -26,56 +30,53 @@ class StudentsController extends \BaseController {
 
 	/**
 	 * Store a newly created resource in storage.
-	 * POST /students
+	 * POST /secretaries
 	 *
 	 * @return Response
 	 */
 	public function store()
 	{
-	     $data = Input::all();
-
-        Student::create($data);
-
+        $data = Input::all();
+        Secretary::create($data);
 
         $email=Input::get('email');
+        //$password=Input::get('password');
 
-        $user =  Sentry::createUser(array(
+
+        Sentry::register(array(
             'email'=> $email,
-            'password'=> 'password123',
+            'password'=> 'secretary123',
             'activated' => true,
         ));
 
+
         $user = Sentry::findUserByLogin($email);
 
-        $group = Sentry::findGroupByName('students');
+        $group = Sentry::findGroupByName('secretary');
 
 
         $user->addGroup($group);
 
-
-        Result::create($data);
-
         return Response::json(array('success' => true));
-
 	}
 
 	/**
 	 * Display the specified resource.
-	 * GET /students/{id}
+	 * GET /secretaries/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
 	public function show($id)
 	{
-        $student = Student::findorfail($id);
+        $secretary = Secretary::findorfail($id);
 
-        return $student;
+        return $secretary;
 	}
 
 	/**
 	 * Show the form for editing the specified resource.
-	 * GET /students/{id}/edit
+	 * GET /secretaries/{id}/edit
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -87,17 +88,16 @@ class StudentsController extends \BaseController {
 
 	/**
 	 * Update the specified resource in storage.
-	 * PUT /students/{id}
+	 * PUT /secretaries/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
 	public function update($id)
 	{
-
-        $student = Student::findorFail($id);
+        $secretary = Secretary::findorFail($id);
         $data = Input::all();
-        $student->update($data);
+        $secretary->update($data);
 
 
 
@@ -107,17 +107,14 @@ class StudentsController extends \BaseController {
 
 	/**
 	 * Remove the specified resource from storage.
-	 * DELETE /students/{id}
+	 * DELETE /secretaries/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
 	public function destroy($id)
 	{
-		Student::destroy($id);
-
-        return Response::json(array('success' => true));
-
+		//
 	}
 
 }

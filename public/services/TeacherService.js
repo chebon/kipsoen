@@ -7,7 +7,7 @@
 var kipsoen = angular.module('teacherService', ['ngResource']);
 
 kipsoen.factory('TeachersFactory', function ($resource) {
-    return $resource('/announcements', {}, {
+    return $resource('/teachers', {}, {
         query: { method: 'GET', isArray: true },
         create: { method: 'POST' }
     })

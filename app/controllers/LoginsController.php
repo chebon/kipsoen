@@ -75,6 +75,7 @@ class LoginsController extends \BaseController {
             $admin = Sentry::findGroupByName('teachers');
             $users = Sentry::findGroupByName('students');
             $hod = Sentry::findGroupByName('HOD');
+            $secretary = Sentry::findGroupByName('secretary');
             if ($userget->inGroup($admin)) {
 
 
@@ -91,6 +92,13 @@ class LoginsController extends \BaseController {
             elseif ($user->inGroup($hod)) {
 
                 return Redirect::to('/HOD');
+
+                //echo "HOD";
+            }
+
+            elseif ($user->inGroup($secretary)) {
+
+                return Redirect::to('/secretary');
 
                 //echo "HOD";
             }

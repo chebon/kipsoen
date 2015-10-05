@@ -52,4 +52,8 @@ kipsoen.controller('TeacherCreationCtrl', ['$scope', 'TeachersFactory', '$locati
             TeachersFactory.create($scope.teacher);
             $location.path('/teacher-list');
         }
+
+        $scope.cancel = function () {
+            $location.path('/teacher-list');
+        };
     }]);
