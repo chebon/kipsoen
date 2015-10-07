@@ -86,7 +86,10 @@ class LoginsController extends \BaseController {
             } elseif ($user->inGroup($users)) {
 
 
-                echo "students";
+                return Redirect::to('/student');
+
+
+                //echo "students";
             }
 
             elseif ($user->inGroup($hod)) {

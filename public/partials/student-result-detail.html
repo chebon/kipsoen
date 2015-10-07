@@ -1,10 +1,130 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-<div></div> ng-model="result.mathematics"
-</body>
-</html>
+<div class="container">
+    <h1>Student detail</h1>
+    <div class="col-xs-12 col-sm-12">
+        <form novalidate="novalidate" class="form-inline " role="form">
+
+
+            <!--start of playing ground-->
+
+
+            <!--<div class="form-group">
+                <div class="col-xs-3 text-right">
+                    <label for="cpTitle">Title</label>
+                </div>
+                <div class="col-xs-9">
+                    <input type="text" class="form-control" placeholder="Title of the program" id="cpTitle" />
+                </div>
+            </div>
+    -->
+
+            <!--end of playing ground-->
+
+
+
+            <div ng-repeate="results in result">
+                First name : {{result.first_name}}
+
+
+            </div>
+
+
+            <div ng-repeate="results in result">
+
+
+                registration number : {{result.registration_number}}
+            </div>
+
+
+            <div ng-repeate="results in result">
+
+
+                Last name : {{result.last_name}}
+            </div>
+
+            <div ng-repeate="results in result">
+
+
+                examination : {{result.examination}}
+            </div>
+
+            <div ng-repeate="results in result">
+
+
+                mathematics : {{result.mathematics}}
+            </div>
+
+            <div ng-repeate="results in result">
+
+
+                english  : {{result.english}}
+            </div>
+
+            <div ng-repeate="results in result">
+
+
+                kiswahili  : {{result.kiswahili}}
+            </div>
+
+            <div ng-repeate="results in result">
+
+
+                kiswahili  : {{result.kiswahili}}
+            </div>
+
+            <div ng-repeate="results in result">
+
+
+                biology  : {{result.biology}}
+            </div>
+
+            <div ng-repeate="results in result">
+
+
+                chemistry  : {{result.chemistry}}
+            </div>
+
+            <div ng-repeate="results in result">
+
+
+                physics  : {{result.physics}}
+            </div>
+
+            <div ng-repeate="results in result">
+
+
+                history  : {{result.history}}
+            </div>
+
+            <div ng-repeate="results in result">
+
+
+                Religious education  : {{result.religious_education}}
+            </div>
+
+            <div ng-repeate="results in result">
+
+
+                agriculture  : {{result.agriculture}}
+            </div>
+
+            <div ng-repeate="results in result">
+
+
+                Business studies  : {{result.business_studies}}
+            </div>
+
+
+            <div ng-repeate="results in result">
+
+
+                total   : {{result.total}}
+            </div>
+
+
+
+
+
+
+        </form>
+    </div>
+</div>    

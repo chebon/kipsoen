@@ -10,7 +10,7 @@
 
 
 
-var kipsoen = angular.module('ResultController', []);
+var kipsoen = angular.module('StudentResultController', []);
 
 kipsoen.controller('ResultListCtrl', ['$scope', 'ResultsFactory', 'ResultFactory', '$location',
     function ($scope, ResultsFactory, ResultFactory, $location) {
@@ -47,7 +47,7 @@ kipsoen.controller('ResultDetailCtrl', ['$scope', '$routeParams', 'ResultsFactor
 
        // $scope.students = StudentsFactory.query();
 
-       // $scope.result = ResultFactory.show({id: $routeParams.id});
+        $scope.result = ResultFactory.show({id: $routeParams.id});
 
        // $scope.examinations = ExaminationsFactory.query();
     }]);

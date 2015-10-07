@@ -5,5 +5,7 @@ class Examination extends \Eloquent {
 
 
         "examination_name",
-        "stream_"];
+        "stream_",
+    "start_date",
+    "end_date"];
 }

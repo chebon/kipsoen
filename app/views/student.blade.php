@@ -10,12 +10,13 @@
         <script src="angular/angular.js"></script>
         <script src="angular/angular-route.js"></script>
         <script src="angular/angular-resource.js"></script>
-        <script src="js/student.js"></script>
+
+        <script src="controllers/studentResultController.js"></script>
+        <script src="controllers/Examination.js"></script>
+        <script src="services/StudentResultService.js"></script>
         <script src="services/ExaminationService.js"></script>
 
-        <script src="controllers/Examination.js"></script>
-        <script src="controllers/studentResultController.js"></script>
-        <script src="services/StudentResultService.js"></script>
+        <script src="js/student.js"></script>
         <script scr="js/route-styles.js"></script>
 
 
@@ -39,7 +40,7 @@
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
 
-                            <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> logout</a></li>
+                            <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> llololo</a></li>
                         </ul>
                     </div>
                 </div>

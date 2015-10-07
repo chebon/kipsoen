@@ -19,7 +19,7 @@ Route::get('/', function()
 
 Route::get('/student', function()
 {
-    return View::make('student');
+    return View::make('teacherpanel');
 });
 
 

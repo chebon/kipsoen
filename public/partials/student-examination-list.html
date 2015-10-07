@@ -1,0 +1,43 @@
+
+<div class="container">
+
+
+
+
+
+
+
+    <table class="table table-condensed table-bordered table-hover tableTop">
+        <thead>
+
+        <!--<tr>
+            <th colspan="6"><input st-search="" class="form-control" placeholder="complete examination search" type="text"/>
+            </th>
+        </tr>-->
+        <tr>
+            <!--<th st-sort="id">id</th>-->
+            <th st-sort="Examination_name"> name</th>
+            <th st-sort="stream">stream</th>
+
+            <th st-sort="actions">start date</th>
+            <th st-sort="actions">end date</th>
+        </tr>
+
+        </thead>
+        <tbody>
+        <tr ng-repeat="examination in examinations">
+            <!--<td>{{ examination.id }}</td>-->
+
+            <td>{{ examination.examination_name }}</td>
+            <td>{{ examination.stream_ }}</td>
+            <td>{{ examination.start_date }}</td>
+            <td>{{ examination.end_date }}</td>
+
+        </tr>
+        </tbody>
+    </table>
+
+
+
+</div>
+

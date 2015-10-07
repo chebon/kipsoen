@@ -16,14 +16,11 @@ kipsoen.controller('AnnouncementListCtrl', ['$scope', 'AnnouncementsFactory', 'A
     function ($scope, AnnouncementsFactory, AnnouncementFactory, $location) {
 
         // callback for ng-click 'editAnnouncement':
-        $scope.editAnnouncement = function $email(announcementId) {
+        $scope.editAnnouncement = function (announcementId) {
             $location.path('/announcement-detail/' + announcementId);
         };
 
 
-        $scope.result = function $email(studentId) {
-            $location.path('/announcement-detail/' + studentId);
-        };
 
         // callback for ng-click 'deleteAnnouncement':
         $scope.deleteAnnouncement = function (announcementId) {
