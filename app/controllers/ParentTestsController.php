@@ -40,7 +40,7 @@ class ParentTestsController extends \BaseController {
 
        $user =  Sentry::createUser(array(
            'email'=> $email,
-          'password'=> 'password123',
+          'password'=> 'parent123',
             'activated' => true,
         ));
 

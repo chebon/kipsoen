@@ -51,13 +51,39 @@
         </div>
 
         <div class="input-group input-group-lg">
-            <span class="input-group-addon glyphicon glyphicon-calendar" id="date_of_birth"></span>
-            <input type="date" class="form-control" placeholder="date of birth " aria-describedby="date_of_birth" ng-model="teacher.date_of_birth">
+            <span class="input-group-addon glyphicon glyphicon-user" id="email"></span>
+            <input type="text" class="form-control" placeholder="email" aria-describedby="email" ng-model="teacher.email">
         </div>
 
+
+
         <div class="input-group input-group-lg">
-            <span class="input-group-addon glyphicon glyphicon-education" id="class"></span>
-            <input type="text" class="form-control" placeholder="class " aria-describedby="class" ng-model="teacher.class">
+
+            <span class="input-group-addon glyphicon glyphicon-user" ></span>
+            <select class="form-group input-lg" ng-model="teacher.major_one"  >
+
+                <option class="form-control input-lg" ng-repeat="major_one in majors" value="{{major_one}}" >{{major_one}}</option>
+            </select>
+        </div>
+
+
+        <div class="input-group input-group-lg">
+
+            <span class="input-group-addon glyphicon glyphicon-user" ></span>
+            <select class="form-group input-lg" ng-model="teacher.major_two"  >
+
+                <option class="form-control input-lg" ng-repeat="major_two in majors" value="{{major_two}}" >{{major_two}}</option>
+            </select>
+        </div>
+
+
+        <div class="input-group input-group-lg">
+
+            <span class="input-group-addon glyphicon glyphicon-user" ></span>
+            <select class="form-group input-lg" ng-model="teacher.major_three"  >
+
+                <option class="form-control input-lg" ng-repeat="major_three in majors" value="{{major_three}}" >{{major_three}}</option>
+            </select>
         </div>
 
         <!--<div >

@@ -13,8 +13,6 @@ var kipsoen = angular.module('kipsoen', ['ngRoute', 'studentService',
 
 kipsoen.config(['$routeProvider', function ($routeProvider) {
 
-    $routeProvider.when('/student-list', {templateUrl: 'partials/student-list.html', controller: 'StudentListCtrl'});
-    $routeProvider.when('/student-detail/:id', {templateUrl: 'partials/student-detail.html', controller: 'StudentDetailCtrl'});
 
 
 
@@ -27,7 +25,7 @@ kipsoen.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/examination-detail/:id', {templateUrl: 'partials/examination-detail.html', controller: 'ExaminationDetailCtrl'});
 
 
-    $routeProvider.when('/result-list', {templateUrl: 'partials/result-list.html', controller: 'ResultListCtrl'});
+    $routeProvider.when('/result-list', {templateUrl: 'partials/Parent-result-list.html', controller: 'ResultListCtrl'});
     $routeProvider.when('/result-detail/:id', {templateUrl: 'partials/result-detail.html', controller: 'ResultDetailCtrl'});
 
 

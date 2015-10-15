@@ -21,7 +21,6 @@ kipsoen.controller('AnnouncementListCtrl', ['$scope', 'AnnouncementsFactory', 'A
         };
 
 
-
         // callback for ng-click 'deleteAnnouncement':
         $scope.deleteAnnouncement = function (announcementId) {
             AnnouncementFactory.delete({ id: announcementId });
@@ -52,8 +51,8 @@ kipsoen.controller('AnnouncementDetailCtrl', ['$scope', '$routeParams', 'Announc
         $scope.announcement = AnnouncementFactory.show({id: $routeParams.id});
     }]);
 
-kipsoen.controller('AnnouncementCreationCtrl', ['$scope', 'AnnouncementsFactory', 'StudentsFactory', '$location',
-    function ($scope, AnnouncementsFactory, StudentsFactory, $location) {
+kipsoen.controller('AnnouncementCreationCtrl', ['$scope', 'AnnouncementsFactory', '$location',
+    function ($scope, AnnouncementsFactory, $location) {
 
 
         $scope.cancel = function () {

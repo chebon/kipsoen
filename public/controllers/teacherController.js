@@ -53,6 +53,17 @@ kipsoen.controller('TeacherCreationCtrl', ['$scope', 'TeachersFactory', '$locati
             $location.path('/teacher-list');
         }
 
+        $scope.majors =['mathematics',
+            'english',
+            'kiswahili',
+            'biology',
+            'chemistry',
+            'physics',
+            'business_studies',
+            'religious_education',
+            'agriculture',
+            'history'];
+
         $scope.cancel = function () {
             $location.path('/teacher-list');
         };

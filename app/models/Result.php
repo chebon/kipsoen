@@ -1,12 +1,14 @@
 <?php
 
 class Result extends \Eloquent {
+
+    protected $table = 'results';
 	protected $fillable = [
         'id',
         'student_id',
         'first_name',
         'examination',
-        'middle_name',
+        'last_name',
         'mathematics',
         'english',
         'kiswahili',

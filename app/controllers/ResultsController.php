@@ -75,7 +75,7 @@ class ResultsController extends \BaseController {
        // $data =Input::all();
 
         $first_name=Input::get('first_name');
-        $middle_name=Input::get('middle_name');
+        $middle_name=Input::get('last_name');
         $examination=Input::get('examination');
         $mathematics=Input::get('mathematics');
         $english=Input::get('english');
@@ -101,7 +101,7 @@ class ResultsController extends \BaseController {
             'business_studies'=>$business_studies,
             'examination'=>$examination,
             'first_name'=>$first_name,
-            'middle_name'=>$middle_name,
+            'last_name'=>$middle_name,
 
 
             'total'=>$mathematics+$english+$kiswahili+$biology+$physics+$chemistry+$history+$agriculture+$religious_education+$business_studies

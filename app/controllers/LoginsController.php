@@ -76,11 +76,12 @@ class LoginsController extends \BaseController {
             $users = Sentry::findGroupByName('students');
             $hod = Sentry::findGroupByName('HOD');
             $secretary = Sentry::findGroupByName('secretary');
+            $parent = Sentry::findGroupByName('parents');
             if ($userget->inGroup($admin)) {
 
 
-              // echo "teachers";
-                return Redirect::to('/teacher');
+              echo "teachers";
+              return Redirect::to('/teacher');
 
 
             } elseif ($user->inGroup($users)) {
@@ -103,8 +104,17 @@ class LoginsController extends \BaseController {
 
                 return Redirect::to('/secretary');
 
-                //echo "HOD";
+
             }
+
+
+            elseif ($user->inGroup($secretary)) {
+
+                return Redirect::to('/parent');
+
+
+            }
+
 
         }
         catch (Cartalyst\Sentry\Users\LoginRequiredException $e)

@@ -42,21 +42,13 @@ Route::get('/parent', function()
 });
 
 
-Route::group(array( 'before' => 'auth'), function()
-{
+
 
 Route::resource('students', 'StudentsController');
 
-});
 
 
 
-Route::group(array( 'before' => 'teacher'), function()
-{
-
-
-
-});
 
 Route::resource('studentResults', 'StudentResultsController');
 

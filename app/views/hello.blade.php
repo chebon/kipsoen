@@ -62,9 +62,7 @@
                 <li>
                     <a href="/contact">contact</a>
                 </li>
-                <li>
-                    <a href="/about">About</a>
-                </li>
+
             </ul>
         </div>
         <!-- /.navbar-collapse -->

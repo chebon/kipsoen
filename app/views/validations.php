@@ -10,7 +10,7 @@
     <script src="angular/angular.js"></script>
     <script src="angular/angular-route.js"></script>
     <script src="angular/angular-resource.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/teachers.js"></script>
     <script src="controllers/Examination.js"></script>
     <script src="controllers/studentController.js"></script>
     <script src="services/StudentService.js"></script>

@@ -11,6 +11,12 @@ class StudentsController extends \BaseController {
 	public function index()
 	{
 		return Response::json(Student::get());
+
+       // $email = DB::table('users')->where('name', 'John')->value('email');
+
+       /* $users = DB::table('students')->where('parent', '=', 'paret')->get();
+
+        return $users;*/
 	}
 
 	/**
@@ -34,10 +40,14 @@ class StudentsController extends \BaseController {
 	{
 	     $data = Input::all();
 
-        Student::create($data);
+
 
 
         $email=Input::get('email');
+
+       // $reg = Input::get('registration_number');
+
+       // $email = Input::merge(array('registration_number', 'SomeNewData'));
 
         $user =  Sentry::createUser(array(
             'email'=> $email,
@@ -54,6 +64,8 @@ class StudentsController extends \BaseController {
 
 
         Result::create($data);
+
+        Student::create($data);
 
         return Response::json(array('success' => true));
 
