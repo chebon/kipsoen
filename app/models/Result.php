@@ -7,7 +7,7 @@ class Result extends \Eloquent {
         'id',
         'student_id',
         'first_name',
-        'examination',
+        'examination_id',
         'last_name',
         'mathematics',
         'english',
@@ -25,4 +25,21 @@ class Result extends \Eloquent {
         'created_at',
         'updated_at'
     ];
+
+
+
+
+
+    public function student()
+    {
+        return $this->belongsTo('Student');
+    }
+
+    public function classes()
+    {
+        return $this->belongsTo('Classes');
+    }
+
+
+
 }

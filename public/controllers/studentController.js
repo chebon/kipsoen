@@ -69,12 +69,12 @@ kipsoen.controller('StudentDetailCtrl', ['$scope', '$routeParams', "ParentsFacto
         $scope.classes = ['north', 'south'] ;
     }]);
 
-kipsoen.controller('StudentCreationCtrl', ['$scope', 'StudentsFactory', 'ParentsFactory', '$location',
-    function ($scope, StudentsFactory, ParentsFactory, $location) {
+kipsoen.controller('StudentCreationCtrl', ['$scope', 'StudentsFactory', 'ParentsFactory', 'ClassesFactory', '$location',
+    function ($scope, StudentsFactory, ParentsFactory, ClassesFactory, $location) {
 
         // callback for ng-click 'createNewStudent':
 
-        $scope.classes = ['north', 'south'] ;
+        $scope.classes = ClassesFactory.query()
 
         $scope.parents = ParentsFactory.query()
         $scope.createNewStudent = function () {

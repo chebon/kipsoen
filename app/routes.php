@@ -50,13 +50,15 @@ Route::resource('students', 'StudentsController');
 
 
 
-Route::resource('studentResults', 'StudentResultsController');
+Route::resource('ClassResults', 'ClassResultsController');
 
 Route::resource('results', 'ResultsController');
 
 Route::resource('examinations', 'ExaminationsController');
 
 Route::resource('teachers', 'TeachersController');
+
+Route::resource('classes', 'ClassesController');
 
 
 

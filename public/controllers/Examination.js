@@ -44,8 +44,12 @@ kipsoen.controller('ExaminationDetailCtrl', ['$scope', '$routeParams', 'Examinat
         $scope.examination = ExaminationFactory.show({id: $routeParams.id});
     }]);
 
-kipsoen.controller('ExaminationCreationCtrl', ['$scope', 'ExaminationsFactory', 'StudentsFactory', '$location',
-    function ($scope, ExaminationsFactory, StudentsFactory, $location) {
+kipsoen.controller('ExaminationCreationCtrl', ['$scope', 'ExaminationsFactory', 'StudentsFactory', 'ClassesFactory', '$location',
+    function ($scope, ExaminationsFactory, StudentsFactory, ClassesFactory, $location) {
+
+
+
+        $scope.classes = ClassesFactory.query()
 
 
         $scope.cancel = function () {

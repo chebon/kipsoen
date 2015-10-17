@@ -17,8 +17,15 @@
     </div>
 
     <div class="input-group input-group-lg">
-        <span class="input-group-addon glyphicon glyphicon-user" id="stream_"></span>
-        <input type="text" class="form-control" placeholder="Stream " aria-describedby="stream_" ng-model="examination.stream_">
+        <span class="input-group-addon glyphicon glyphicon-user" >class</span>
+        <select
+                class="form-control input-lg"
+                ng-model="examination.class_id"
+
+                ng-options="value.id as value.name  group by value.created_at for value in classes">
+
+
+        </select>
     </div>
 
     <div class="input-group input-group-lg">

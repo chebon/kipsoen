@@ -8,10 +8,27 @@ class Student extends \Eloquent {
         "second_name",
         "last_name",
         "registration_number",
-        "parent",
+        "parent_id",
         "date_of_birth",
-        'class',
+        'class_id',
         "create_at",
         "updated_at"
     ];
+
+
+
+    public function result()
+    {
+        return $this->hasMany('Result');
+    }
+
+    public function classes()
+    {
+        return $this->belongsTo('Classes');
+    }
+
+    public function parent()
+    {
+        return $this->belongsTo('ParentTest');
+    }
 }

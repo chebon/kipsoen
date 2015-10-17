@@ -5,7 +5,15 @@ class Examination extends \Eloquent {
 
 
         "examination_name",
-        "stream_",
+        "class_id",
     "start_date",
     "end_date"];
+
+
+
+    public function classes()
+    {
+        return $this->belongsTo('Classes');
+    }
+
 }

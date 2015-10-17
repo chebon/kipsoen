@@ -37,7 +37,7 @@
 
         <div class="input-group input-group-lg">
             <span class="input-group-addon glyphicon glyphicon-user" id="email"></span>
-            <input type="text" class="form-control" placeholder="email" aria-describedby="email" ng-model="parent.email">
+            <input type="email" class="form-control" placeholder="email" aria-describedby="email" ng-model="parent.email">
         </div>
 
 
@@ -50,6 +50,11 @@
         <div class="input-group input-group-lg">
             <span class="input-group-addon glyphicon glyphicon-user" id="phone_number"></span>
             <input type="number" class="form-control" placeholder="phone" aria-describedby="phone_number" ng-model="parent.phone_number">
+        </div>
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon glyphicon glyphicon-user" id="occupation"></span>
+            <input type="text" class="form-control" placeholder="occupation" aria-describedby="occupation" ng-model="parent.ocuupation">
         </div>
 
 
@@ -67,9 +72,9 @@
             <label>student</label>
             <select
                     class="form-control input-lg"
-                    ng-model="parent.student"
+                    ng-model="parent.student_id"
 
-                    ng-options="value.last_name as value.last_name  group by value.first_name for value in students">
+                    ng-options="value.id as value.last_name  group by value.first_name for value in students">
 
                 <option>{{last_name }}</option>
             </select>

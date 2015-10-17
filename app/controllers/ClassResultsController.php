@@ -1,6 +1,6 @@
 <?php
 
-class StudentResultsController extends \BaseController {
+class ClassResultsController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -10,7 +10,13 @@ class StudentResultsController extends \BaseController {
 	 */
 	public function index()
 	{
-        return Response::json(Result::get());
+        $query    = Result::with(["classes"]);
+        $category = Input::get("class_id");
+        if ($category)
+        {
+            $query->where("student_id", $category);
+        }
+        return $query->get();
 	}
 
 	/**

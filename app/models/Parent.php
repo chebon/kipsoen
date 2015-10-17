@@ -1,5 +1,19 @@
 <?php
 
-class Parent extends \Eloquent {
-	protected $fillable = [];
+class ParentTest extends \Eloquent {
+
+    protected $table = "parents";
+	protected $fillable = [
+        "id",
+        "first_name",
+        "second_name",
+        "last_name",
+        "occupation",
+        "id_number",
+        "student_id",
+        "phone_number",
+        "parenity",
+        "created_at",
+        "updated_at"
+    ];
 }

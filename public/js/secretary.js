@@ -7,7 +7,7 @@
 
 
 var kipsoen = angular.module('kipsoen', ['ngRoute', 'StudentController', 'studentService', "TeacherController", "teacherService",
-    "parentService", "ParentController", 'resultService', "secretaryService", "SecretaryController", 'ResultController', 'examinationService', 'ExaminationController', "announcementService", "AnnouncementController"]);
+    "parentService", "ParentController", 'resultService', "secretaryService", "SecretaryController", 'ResultController', 'examinationService', 'ExaminationController', "announcementService", "AnnouncementController", "ClassController", "classService"]);
 
 
 kipsoen.config(['$routeProvider', function ($routeProvider) {

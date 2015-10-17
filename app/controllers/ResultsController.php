@@ -10,7 +10,15 @@ class ResultsController extends \BaseController {
 	 */
 	public function index()
 	{
-		return Response::json(Result::get());
+		//return Response::json(Result::get());
+
+        $query    = Result::with(["student"]);
+        $category = Input::get("student_id");
+        if ($category)
+        {
+            $query->where("student_id", $category);
+        }
+        return $query->get();
 	}
 
 	/**
@@ -44,10 +52,16 @@ class ResultsController extends \BaseController {
 	 * @return Response
 	 */
 	public function show($id)
-	{
+	{/*
 		$result = Result::findorfail($id);
 
-        return $result;
+        return $result;*/
+
+
+        $phone = Student::find($id)->result;
+
+        return $phone;
+
 	}
 
 	/**

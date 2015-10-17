@@ -34,9 +34,38 @@ class ExaminationsController extends \BaseController {
 	{
 		$data = Input::all();
 
+
+
         Examination::create($data);
 
-        return Response::json(['success' => true]);
+       // return Response::json(['success' => true]);
+
+
+        $class = Input::get('class_id');
+
+        $users = DB::table('students')->where('class_id', '>', $class)->get();
+
+
+
+
+       // $results = json_decode($users);
+        foreach ($users as $result){
+
+            Result::create([
+                'student_id' => $result->id,
+                'first_name' => $result->first_name,
+                'last_name' => $result->last_name,
+
+                'class_id' => $result->class_id
+
+            ]);
+        }
+
+
+
+
+
+
 	}
 
 	/**

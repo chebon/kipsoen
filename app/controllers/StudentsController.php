@@ -10,13 +10,16 @@ class StudentsController extends \BaseController {
 	 */
 	public function index()
 	{
-		return Response::json(Student::get());
+        $query    = Student::with(["classes"]);
+        $class = Input::get("class_id");
+        if ($class)
+        {
+            $query->where("class_id", $class);
+        }
+        return $query->get();
 
-       // $email = DB::table('users')->where('name', 'John')->value('email');
 
-       /* $users = DB::table('students')->where('parent', '=', 'paret')->get();
 
-        return $users;*/
 	}
 
 	/**

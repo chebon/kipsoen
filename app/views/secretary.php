@@ -14,6 +14,7 @@
     <script src="controllers/Examination.js"></script>
     <script src="controllers/secretary.js"></script>
     <script src="controllers/announcements.js"></script>
+    <script src="controllers/classes.js"></script>
     <script src="controllers/studentController.js"></script>
     <script src="services/StudentService.js"></script>
     <script src="controllers/teacherController.js"></script>
@@ -24,8 +25,12 @@
     <script src="services/ResultService.js"></script>
     <script src="services/ExaminationService.js"></script>
     <script src="services/secretary.js"></script>
+    <script src="services/classes.js"></script>
     <script src="services/AnnouncementService.js"></script>
     <script scr="js/route-styles.js"></script>
+
+
+
 
 
 
