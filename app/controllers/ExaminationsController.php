@@ -43,7 +43,7 @@ class ExaminationsController extends \BaseController {
 
         $class = Input::get('class_id');
 
-        $users = DB::table('students')->where('class_id', '>', $class)->get();
+        $users = DB::table('students')->where('class_id', '=', $class)->get();
 
 
 
@@ -60,6 +60,8 @@ class ExaminationsController extends \BaseController {
 
             ]);
         }
+
+        return $users;
 
 
 
