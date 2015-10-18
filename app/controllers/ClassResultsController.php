@@ -11,10 +11,10 @@ class ClassResultsController extends \BaseController {
 	public function index()
 	{
         $query    = Result::with(["classes"]);
-        $category = Input::get("class_id");
-        if ($category)
+        $class = Input::get("class_id");
+        if ($class)
         {
-            $query->where("student_id", $category);
+            $query->where("class_id", $class);
         }
         return $query->get();
 	}

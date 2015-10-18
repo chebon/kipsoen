@@ -4,6 +4,8 @@
 
 
 
+
+
     <table class="table">
         <tbody>
 
@@ -13,9 +15,24 @@
 
             <form class="form-control">
 
-                <input st-search="" class="input-medium search-query" placeholder="complete result search" type="text"/>
+                <input st-search=""  ng-model="ser" class="input-medium search-query" placeholder="complete result search" type="text"/>
 
             </form>
+
+
+
+
+            <button
+                    type="button"
+                    class="category btn btn-default"
+                    ng-repeat="category in examinations"
+
+                    ng-click="filters.examination_id = category.id"
+
+                    >
+                {{ category.examination_name }}
+            </button>
+
 
 
         </tr>
@@ -35,13 +52,13 @@
             <th st-sort="firstName">first name</th>
             <th st-sort="lastName">last name</th>
             <th st-sort="second_name">second name</th>
-            <th st-sort="phone_number">Registration number</th>
+            <th st-sort="phone_number">Registration hnumber</th>
             <th st-sort="actions">actions</th>
         </tr>
 
         </thead>
         <tbody>
-        <tr ng-repeat="result in results">
+        <tr ng-repeat="result in results | filter:filters | filter:ser">
             <!--<td>{{ result.id }}</td>-->
             <td>{{ result.first_name }}</td>
             <td>{{ result.last_name }}</td>

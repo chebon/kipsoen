@@ -40,8 +40,14 @@ class ResultsController extends \BaseController {
 	 */
 	public function store()
 	{
-		$data = Input::all();
-        Result::create($data);
+		/*$data = Input::all();
+        Result::create($data);*/
+
+        $reply =  "really nigger";
+
+        return $reply;
+
+
 	}
 
 	/**
@@ -52,15 +58,12 @@ class ResultsController extends \BaseController {
 	 * @return Response
 	 */
 	public function show($id)
-	{/*
+	{
 		$result = Result::findorfail($id);
 
-        return $result;*/
+        return $result;
 
 
-        $phone = Student::find($id)->result;
-
-        return $phone;
 
 	}
 
@@ -90,7 +93,7 @@ class ResultsController extends \BaseController {
 
         $first_name=Input::get('first_name');
         $middle_name=Input::get('last_name');
-        $examination=Input::get('examination');
+        $examination=Input::get('examination_id');
         $mathematics=Input::get('mathematics');
         $english=Input::get('english');
         $kiswahili=Input::get('kiswahili');
@@ -116,6 +119,7 @@ class ResultsController extends \BaseController {
             'examination'=>$examination,
             'first_name'=>$first_name,
             'last_name'=>$middle_name,
+            'examination_id'=>$examination,
 
 
             'total'=>$mathematics+$english+$kiswahili+$biology+$physics+$chemistry+$history+$agriculture+$religious_education+$business_studies

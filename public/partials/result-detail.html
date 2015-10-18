@@ -69,11 +69,11 @@
             <span class="input-group-addon">Examination</span>
             <select
                     class="form-control input-lg"
-                    ng-model="result.examination"
+                    ng-model="result.examination_id"
 
-                    ng-options="value.examination_name as value.examination_name  group by value.stream_ for value in examinations">
+                    ng-options="value.id as value.examination_name  group by value.class_id for value in examinations">
 
-                <option>--</option>
+
             </select>
         </div>
 

@@ -15,6 +15,7 @@ class Result extends \Eloquent {
         'biology',
         'chemistry',
         'physics',
+        'class_id',
         'business_studies',
         'religious_education',
         'agriculture',

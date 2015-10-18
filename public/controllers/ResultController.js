@@ -7,8 +7,8 @@
 
 var kipsoen = angular.module('ResultController', []);
 
-kipsoen.controller('ResultListCtrl', ['$scope', 'ResultsFactory', 'ResultFactory', '$location',
-    function ($scope, ResultsFactory, ResultFactory, $location) {
+kipsoen.controller('ResultListCtrl', ['$scope', 'ResultsFactory', 'ResultFactory', 'StudentsFactory', 'ExaminationsFactory', '$location',
+    function ($scope, ResultsFactory, ResultFactory, StudentsFactory, ExaminationsFactory,  $location) {
 
         // callback for ng-click 'editResult':
         $scope.editResult = function (resultId) {
@@ -26,7 +26,35 @@ kipsoen.controller('ResultListCtrl', ['$scope', 'ResultsFactory', 'ResultFactory
             $location.path('/result-creation');
         };
 
+
+
+
+
+        $scope.filters = { };
+
+
+
+        $scope.examinations = ExaminationsFactory.query()
+
         $scope.results = ResultsFactory.query();
+
+        /*.success(function(data) {
+            $scope.results = [];
+            angular.forEach(data.results, function(value, key) {
+                $scope.results.push(value);
+            });
+            $scope.isVisible = function(name){
+                return true;// return false to hide this result's albums
+            };
+        });*/
+
+
+
+
+
+
+
+
     }]);
 
 kipsoen.controller('ResultDetailCtrl', ['$scope', '$routeParams', 'ResultsFactory', 'ExaminationsFactory', 'StudentsFactory', 'ResultFactory', '$location',
