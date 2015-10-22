@@ -32,7 +32,7 @@ kipsoen.config(['$routeProvider', function ($routeProvider) {
 
     $routeProvider.when('/result-list', {templateUrl: 'partials/result-list.html', controller: 'ResultListCtrl'});
     $routeProvider.when('/result-detail/:id', {templateUrl: 'partials/result-detail.html', controller: 'ResultDetailCtrl'});
-    $routeProvider.when('/result-creation', {templateUrl: 'partials/result-creation.html', controller: 'ResultCreationCtrl'});
+    $routeProvider.when('/result-det/:id', {templateUrl: 'partials/student-result-detail.html', controller: 'ResultDetailCtrl'});
 
     $routeProvider.when('/announcement-list', {templateUrl: 'partials/announcement-list.html', controller: 'AnnouncementListCtrl'});
     $routeProvider.when('/announcement-detail/:id', {templateUrl: 'partials/announcement-detail.html', controller: 'AnnouncementDetailCtrl'});

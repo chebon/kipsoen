@@ -13,7 +13,7 @@
 
                 <form class="form-control">
 
-                <input st-search="" class="input-medium search-query" placeholder="complete student search" type="text"/>
+                <input st-search="" class="input-medium search-query" placeholder="complete student search" type="text" ng-model="search"/>
 
                 </form>
 
@@ -35,7 +35,7 @@
             <th st-sort="firstName">first name</th>
             <th st-sort="registration_number">registration number</th>
             <th st-sort="second_name">second name</th>
-            <th st-sort="parent">parent </th>
+
             <th st-sort="last">last name</th>
             <th st-sort="class">date_of_birth</th>
             <th st-sort="actions">actions</th>
@@ -43,19 +43,19 @@
 
         </thead>
         <tbody>
-        <tr ng-repeat="student in students">
+        <tr ng-repeat="student in students | filter:search">
             <!--<td>{{ student.id }}</td>-->
             <td>{{ student.first_name }}</td>
             <td>{{ student.registration_number }}</td>
             <td>{{ student.second_name }}</td>
-            <td>{{ student.parent }}</td>
+
             <td>{{ student.last_name }}</td>
             <td>{{ student.date_of_birth }}</td>
            <!-- <td>{{ student.class }}</td>-->
             <td>
-                <a ng-click="deleteStudent(student.id)" class="btn btn-small btn-danger">delete</a>
+
           <a ng-click="editStudent(student.id)" class="btn btn-info">Info</a>
-                <a ng-click="result(student.id)" class="btn btn-small btn-success">Results</a>
+
             </td>
         </tr>
         </tbody>

@@ -15,6 +15,10 @@ kipsoen.controller('ResultListCtrl', ['$scope', 'ResultsFactory', 'ResultFactory
             $location.path('/result-detail/' + resultId);
         };
 
+        $scope.ViewResult = function (resultId) {
+            $location.path('/result-det/' + resultId);
+        };
+
         // callback for ng-click 'deleteResult':
         $scope.deleteResult = function (resultId) {
             ResultFactory.delete({ id: resultId });
@@ -73,6 +77,30 @@ kipsoen.controller('ResultDetailCtrl', ['$scope', '$routeParams', 'ResultsFactor
 
 
        $scope.students = StudentsFactory.query();
+
+        $scope.result = ResultFactory.show({id: $routeParams.id});
+
+        $scope.examinations = ExaminationsFactory.query();
+    }]);
+
+
+
+kipsoen.controller('ResultDetail', ['$scope', '$routeParams', 'ResultsFactory', 'ExaminationsFactory', 'StudentsFactory', 'ResultFactory', '$location',
+    function ($scope, $routeParams, ResultsFactory, ExaminationsFactory, StudentsFactory, ResultFactory, $location) {
+
+        // callback for ng-click 'updateResult':
+        $scope.updateResult = function () {
+            ResultFactory.update($scope.result);
+            $location.path('/result-list');
+        };
+
+        // callback for ng-click 'cancel':
+        $scope.cancel = function () {
+            $location.path('/result-list');
+        };
+
+
+        $scope.students = StudentsFactory.query();
 
         $scope.result = ResultFactory.show({id: $routeParams.id});
 

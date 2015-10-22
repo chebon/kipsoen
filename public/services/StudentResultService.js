@@ -12,14 +12,14 @@
 var kipsoen = angular.module('StudentResultService', ['ngResource']);
 
 kipsoen.factory('ResultsFactory', function ($resource) {
-    return $resource('/studentResults', {}, {
+    return $resource('/StudentResults', {}, {
         query: { method: 'GET', isArray: true },
         create: { method: 'POST' }
     })
 });
 
 kipsoen.factory('ResultFactory', function ($resource) {
-    return $resource('/studentResults/:id', {}, {
+    return $resource('/StudentResults/:id', {}, {
         show: { method: 'GET' },
         update: { method: 'PUT', params: {id: '@id'} },
         delete: { method: 'DELETE', params: {id: '@id'} }

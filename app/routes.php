@@ -52,6 +52,8 @@ Route::resource('students', 'StudentsController');
 
 Route::resource('ClassResults', 'ClassResultsController');
 
+Route::resource('StudentResults', 'StudentResultsController');
+
 Route::resource('results', 'ResultsController');
 
 Route::resource('examinations', 'ExaminationsController');

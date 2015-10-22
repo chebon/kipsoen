@@ -44,20 +44,12 @@
         <div ng-repeate="students in student">
 
 
-            Second name : {{student.registration_number}}
+            Reg # : {{student.registration_number}}
         </div>
 
-        <div ng-repeate="students in student">
 
 
-            Second name : {{student.parent}}
-        </div>
 
-        <div ng-repeate="students in student">
-
-
-            Second name : {{student.class}}
-        </div>
 
 
 
@@ -73,7 +65,7 @@
 
                 <div class="col-sm-offset-9 col-sm-10">
 
-                <a ng-click="parent(student.id)" class="btn btn-small btn-primary"> parent</a>
+                <a ng-click="parent(student.parent_id)" class="btn btn-small btn-primary"> parent</a>
 
                     </div>
 

@@ -12,8 +12,8 @@
 
 var kipsoen = angular.module('StudentResultController', []);
 
-kipsoen.controller('ResultListCtrl', ['$scope', 'ResultsFactory', 'ResultFactory', '$location',
-    function ($scope, ResultsFactory, ResultFactory, $location) {
+kipsoen.controller('ResultListCtrl', ['$scope', 'ResultsFactory', 'ResultFactory', 'ExaminationsFactory', '$location',
+    function ($scope, ResultsFactory, ResultFactory, ExaminationsFactory, $location) {
 
         // callback for ng-click 'editResult':
         $scope.editResult = function (resultId) {
@@ -32,6 +32,12 @@ kipsoen.controller('ResultListCtrl', ['$scope', 'ResultsFactory', 'ResultFactory
         };
 
         $scope.results = ResultsFactory.query();
+
+        $scope.examinations = ExaminationsFactory.query();
+
+
+        $scope.filters = { };
+
     }]);
 
 kipsoen.controller('ResultDetailCtrl', ['$scope', '$routeParams', 'ResultsFactory', 'ResultFactory', '$location',
