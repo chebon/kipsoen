@@ -63,28 +63,26 @@ class LoginsController extends \BaseController {
             // Authenticate the user
             $user = Sentry::authenticateAndRemember($credentials, false);
 
-            //AndRemember
-                // echo 'logged in';
-
-          //  return Redirect::to('/index');
 
 
 
 
-            $userget = Sentry::getUser();
+
+            $users = Sentry::getUser();
             $admin = Sentry::findGroupByName('teachers');
-            $users = Sentry::findGroupByName('students');
+            $student= Sentry::findGroupByName('students');
             $hod = Sentry::findGroupByName('HOD');
             $secretary = Sentry::findGroupByName('secretary');
             $parent = Sentry::findGroupByName('parents');
-            if ($userget->inGroup($admin)) {
+            $foo = Sentry::findGroupByName('parents');
+            if ($users->inGroup($admin)) {
 
 
-              echo "teachers";
+
               return Redirect::to('/teacher');
 
 
-            } elseif ($user->inGroup($users)) {
+            } elseif ($users->inGroup($student)) {
 
 
                 return Redirect::to('/student');
@@ -93,14 +91,14 @@ class LoginsController extends \BaseController {
                 //echo "students";
             }
 
-            elseif ($user->inGroup($hod)) {
+            elseif ($users->inGroup($hod)) {
 
                 return Redirect::to('/HOD');
 
                 //echo "HOD";
             }
 
-            elseif ($user->inGroup($secretary)) {
+            elseif ($users->inGroup($secretary)) {
 
                 return Redirect::to('/secretary');
 
@@ -108,12 +106,24 @@ class LoginsController extends \BaseController {
             }
 
 
-            elseif ($user->inGroup($secretary)) {
+            elseif ($users->inGroup($parent)) {
 
-                return Redirect::to('/parent');
+                return Redirect::to('/paren');
+
+               // echo "section. 80";
 
 
             }
+
+            elseif ($users->inGroup($foo)) {
+
+                return Redirect::to('/paren');
+
+                // echo "section. 80";
+
+
+            }
+
 
 
         }

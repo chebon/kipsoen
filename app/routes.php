@@ -17,29 +17,40 @@ Route::get('/', function()
     return View::make('hello');
 });
 
-Route::get('/student', function()
-{
-    return View::make('teacherpanel');
+
+Route::group(array('before' => 'auth'), function() {
+
+    Route::get('/student', function () {
+        return View::make('teacherpanel');
+    });
+
+
+
+    Route::get('/HOD', function () {
+        return View::make('hod');
+    });
+
+
+    Route::get('/paren', function () {
+        return View::make('parent');
+    });
+
+    Route::get('/secretary', function () {
+
+        return View::make('secretary');
+
+    });
+});
+
+Route::group(array('before' => 'teacher'), function() {
+
+    Route::get('/teacher', function () {
+        return View::make('validations');
+    });
+
 });
 
 
-
-
-Route::get('/teacher', function()
-{
-	return View::make('validations');
-});
-
-Route::get('/HOD', function()
-{
-    return View::make('hod');
-});
-
-
-Route::get('/parent', function()
-{
-    return View::make('parent');
-});
 
 
 
@@ -102,12 +113,6 @@ Route::group(array( 'before' => 'HOD'), function()
 });
 
 
-Route::get('/secretary', function()
-{
-
-    return View::make('secretary');
-
-});
 
 
 

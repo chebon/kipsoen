@@ -10,17 +10,13 @@
     <script src="angular/angular.js"></script>
     <script src="angular/angular-route.js"></script>
     <script src="angular/angular-resource.js"></script>
-    <script src="js/parent.js"></script>
+
+    <script src="controllers/studentResultController.js"></script>
     <script src="controllers/Examination.js"></script>
-    <script src="controllers/studentController.js"></script>
-    <script src="services/StudentService.js"></script>
-    {{--<script src="controllers/teacherController.js"></script>
-    <script src="services/TeacherService.js"></script>
-    <script src="controllers/ParentController.js"></script>
-    <script src="services/ParentService.js"></script>--}}
-    <script src="controllers/ResultController.js"></script>
-    <script src="services/ResultService.js"></script>
+    <script src="services/StudentResultService.js"></script>
     <script src="services/ExaminationService.js"></script>
+
+    <script src="js/student.js"></script>
     <script scr="js/route-styles.js"></script>
 
 
@@ -31,17 +27,20 @@
     <div class="spicy">
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#"></a>
-                </div>
+
                 <div>
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Home</a></li>
 
+
+                        <li><a href="paren#/results-list">Results</a></li>
+
+
+
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
 
-                        <li class="active   "><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                        <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> logout</a></li>
                     </ul>
                 </div>
             </div>
@@ -62,4 +61,5 @@
 
 </div>
 </html>
+
 
