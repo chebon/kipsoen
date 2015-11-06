@@ -3,8 +3,9 @@
 
 <header>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/background.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/drunken-parrot.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
     <script src="js/jquery1.js"></script>
     <link href="css/bonche.css" rel="stylesheet">
     <script src="angular/angular.js"></script>

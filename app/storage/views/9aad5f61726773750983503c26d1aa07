@@ -17,7 +17,7 @@
 
     <!-- Loading Drunken Parrot UI -->
     <link href="css/drunken-parrot.css" rel="stylesheet">
-
+    <link href="css/demo.css" rel="stylesheet">
 
     <!-- <link rel="shortcut icon" href="images/favicon.ico"> -->
 
@@ -121,9 +121,9 @@
         <div class="col-md-4" ng-controller="AnnouncementController">
             <h2>Announcements</h2>
             <div ng-repeat="ann in try">
-            <h3>@{{ ann.name }}  </h3>
-                <h3>@{{ ann.date }}</h3>
-            <p>@{{ ann.info }}</p>
+            <h3>{{ ann.name }}  </h3>
+                <h3>{{ ann.date }}</h3>
+            <p>{{ ann.info }}</p>
 
             </div>
         </div>
