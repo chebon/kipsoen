@@ -1412,6 +1412,11 @@ select[multiple].input-lg {
 .input-group-btn > .btn:active {
   z-index: 3;
 }
+
+.well{
+
+    font-family: "SourceSansProSemiBold", Helvetica, Arial, sans-serif;
+}
 .input-group-btn > .btn:active {
   color: white;
 }
@@ -1573,7 +1578,49 @@ select[multiple].input-lg {
 .navbar-inverse {
   background: #364347;
   border-color: #364347;
+
 }
+
+/***********************************/
+
+/*my space*/
+
+
+div.bonche {
+    padding-top: 3cm;
+}
+
+div.input-bonche {
+
+    padding-bottom: 0.5cm;
+    padding-top: 0.5cm;
+
+}
+
+div.bonche-button {
+
+    padding-bottom: 0.5cm;
+    padding-top: 0.5cm;
+
+    padding-right: 3cm;
+
+
+.button-bonche{
+
+    background-color: #ECF0F1;
+
+    width: 2cm;
+}
+}
+
+
+
+
+/*end of my space*/
+
+
+/***************************/
+
 .navbar-inverse .navbar-nav > li > a {
   color: #b2c6cd;
   font-family: "SourceSansProSemiBold", Helvetica, Arial, sans-serif;

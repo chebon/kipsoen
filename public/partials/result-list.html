@@ -1,30 +1,27 @@
 
+
+<Style>
+
+
+    .bonche-bottom{
+
+        padding-bottom: 0.2cm;
+    }
+
+</Style>
+
 <div class="container">
 
 
 
 
 
-
-    <table class="table">
-        <tbody>
-
-
-        <tr>
-
-
-            <form class="form-control">
-
-                <input st-search=""  ng-model="ser" class="input-medium search-query" placeholder="complete result search" type="text"/>
-
-            </form>
-
-
-
+            <h3 >examinations</h3>
+        <div class="row">
 
             <button
                     type="button"
-                    class="category btn btn-default"
+                    class=" btn btn-stroke"
                     ng-repeat="category in examinations"
 
                     ng-click="filters.examination_id = category.id"
@@ -33,11 +30,17 @@
                 {{ category.examination_name }}
             </button>
 
+            <div class=" col-xs-3 col-lg-offset-9 bonche-bottom">
+
+            <input st-search="" class="form-control "  ng-model="ser"  placeholder=" Result search" type="text"/>
+            </div>
 
 
-        </tr>
-        </tbody>
-    </table>
+        </div>
+
+
+
+
 
 
     <table class="table table-condensed table-bordered table-hover tableTop">

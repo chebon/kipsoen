@@ -1,38 +1,16 @@
 <style>
-    .container-fluid{
-        /*padding-top: 3cm;*/
-    }
 
-    div.bonche {
-        padding-top: 3cm;
-    }
 
-    div.input-bonche {
+    .input-bonche-2{
 
-        padding-bottom: 0.5cm;
         padding-top: 0.5cm;
-
+        /*padding-bottom: 0.5cm;;*/
     }
-
-    div.bonche-button {
-
-        padding-bottom: 0.5cm;
-        padding-top: 0.5cm;
-    }
-
-    div.controls{
-        padding-top: 0.5cm;
-        padding-bottom: 0.5cm;
-    }
-
-
-
-
 
 </style>
 
-<div class="container-fluid control-label col-md-6 col-md-offset-3 bonche">
-    <h1>Parent's detail</h1>
+<div class="container-fluid control-label col-md-6 col-md-offset-3">
+    <h2>Parent's detail</h2>
 
     <form novalidate="novalidate">
 
@@ -80,40 +58,34 @@
         </div>
 
 
-        <div class="input-bonche form-group input-icon">
+        <div class="row">
 
-            <label class="form-group">Parenity</label>
-            <select >
+       <!-- <div class="input-bonche form-group input-icon">-->
+        <div class="col-xs-3">
 
-                <option class="form-control input-lg" ng-repeat="patanety in parenities" value="{{patanety}}" ng-model="parent.parenity">{{patanety}}</option>
+            <!--<label class="form-group">Parenity</label>-->
+            <h4 class="demo-panel-title">paternity</h4>
+            <select class = "form-control select select-primary input-lg button-bonche" data-toggle="select" >
+
+                <option  ng-repeat="patanety in parenities" value="{{patanety}}" ng-model="parent.parenity">{{patanety}}</option>
             </select>
         </div>
+        </div>
+
+        <div class="row input-bonche-2">
 
 
-        <!--<div class="input-bonche form-group input-icon">
-            <label>student</label>
-            <select
-                    class="form-control input-lg"
-                    ng-model="parent.student_id"
-
-                    ng-options="value.id as value.last_name  group by value.first_name for value in students">
-
-                <option>{{last_name }}</option>
-            </select>
-        </div>-->
-
-
-
-
-        <div class="control-group">
-            <div class="controls">
+            <div class="col-xs-3">
 
                 <a ng-click="cancel()" class="btn btn-small btn-info">cancel</a>
+
                 </div>
-            <div class="controls">
+
+            <div class="col-xs-3">
                 <!-- parent-creation.html: -->
                 <a ng-click="createNewParent()" class="btn btn-small btn-primary">create  parent</a>
             </div>
         </div>
+
     </form>
 </div>

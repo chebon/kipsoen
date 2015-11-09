@@ -1,25 +1,43 @@
 <style>
-    .input-group{
-        padding-bottom: 1cm;
+    .bonche-top{
+        padding-top: 1cm;
         /*padding-top: 1cm*/
     ;
 
     }
 
+    .button-bonche{
+
+        background-color: #ECF0F1;
+
+        width: 2cm;
+    }
+
+    .bonche-modification{
+
+        padding-top: 0.5cm;
+        padding-bottom: 0.5cm;
+    }
+
 
 </style>
 
-<div class="container-fluid control-label col-md-6 col-md-offset-3">
+<div class="container bonche-top col-xs-3 col-md-offset-4">
 
-    <div class="input-group input-group-lg">
-        <span class="input-group-addon glyphicon glyphicon-user" id="examination_name"></span>
+
+    <h3>examination's detail</h3>
+
+    <div class="form-group input-icon">
+        <span class="fa fa-user" id="examination_name"></span>
         <input type="text" class="form-control" placeholder="examination name" aria-describedby="examination_name" ng-model="examination.examination_name">
     </div>
 
-    <div class="input-group input-group-lg">
-        <span class="input-group-addon glyphicon glyphicon-user" >class</span>
-        <select
-                class="form-control input-lg"
+
+    <h6 class="demo-panel-title">class</h6>
+    <div>
+        <span class="fa fa-user" ></span>
+        <select class="form-control select select-primary button-bonche input-lg" data-toggle="select"
+
                 ng-model="examination.class_id"
 
                 ng-options="value.id as value.name  group by value.created_at for value in classes">
@@ -28,26 +46,38 @@
         </select>
     </div>
 
-    <div class="input-group input-group-lg">
-        <span class="input-group-addon glyphicon glyphicon-user" id="start_date"></span>
+    <div class="bonche-modification">
+    <h6>start date</h6>
+
+    <div class="form-group input-icon">
+        <span class="fa fa-user" id="start_date"></span>
         <input type="date" class="form-control" placeholder="start date " aria-describedby="stream_" ng-model="examination.start_date">
     </div>
 
-    <div class="input-group input-group-lg">
-        <span class="input-group-addon glyphicon glyphicon-user" id="end_date"></span>
+    <h6>finish date</h6>
+
+    <div class="form-group input-icon">
+        <span class="fa fa-user" id="end_date"></span>
         <input type="date" class="form-control" placeholder="end date " aria-describedby="stream_" ng-model="examination.end_date">
+    </div>
     </div>
 
 
 
-    <div class="control-group">
-        <div class="controls">
-            <!-- examnation-detail.html: -->
+
+
+    <div class="row">
+        <div class="col-xs-3">
+
+
             <a ng-click="cancel()" class="btn btn-small btn-danger">cancel</a>
+            </div>
+
+        <div class="col-xs-3 col-lg-offset-3">
 
 
             <!-- examnation-creation.html: -->
-            <a ng-click="createNewExamination()" class="btn btn-small btn-primary">create new examnation</a>
+            <a ng-click="createNewExamination()" class="btn btn-small btn-primary">create</a>
+            </div>
         </div>
-    </div>
     </div>

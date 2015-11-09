@@ -6,28 +6,25 @@
         /*padding-top: 3cm;*/
     }
 
-    div.bonche {
-        padding-top: 3cm;
+    .button-bonche{
+
+        background-color: #ECF0F1;
+
+        width: 2cm;
     }
+    .input-bonche-2{
 
-    div.input-bonche {
-
-        padding-bottom: 0.5cm;
         padding-top: 0.5cm;
-
+        /*padding-bottom: 0.5cm;;*/
     }
 
-    div.bonche-button {
 
-        padding-bottom: 0.5cm;
-        padding-top: 0.5cm;
-    }
 
 
 </style>
 
-<div class="container-fluid control-label col-md-6 col-md-offset-3 bonche ">
-    <h1>Student's Detail</h1>
+<div class="container-fluid control-label col-md-6 col-md-offset-3">
+    <h2>Student's Detail</h2>
 
     <form novalidate="novalidate">
         <!--<div class="form-group panel-body">
@@ -69,7 +66,7 @@
             <input type="email" class="form-control" placeholder="email " aria-describedby="email" ng-model="student.email">
         </div>
 
-        <div class="input-bonche form-group input-icon">
+        <div class="input-bonche-2 form-group input-icon">
             <span class="fa fa-calendar" id="date_of_birth"></span>
             <input type="date" class="form-control" placeholder="date of birth " aria-describedby="date_of_birth" ng-model="student.date_of_birth">
         </div>
@@ -83,58 +80,48 @@
 
 
 
+        <div class="row">
 
-        <div class="input-bonche form-group input-icon dropdown">
-            <span class="fa  fa-education" >class</span>
-            <select
-                    class="form-control input-lg"
-                    ng-model="student.class_id"
+        <div class="col-xs-3">
+            <h5 class="demo-panel-title">Class</h5>
+            <select class="form-control select select-primary button-bonche input-lg" data-toggle="select" ng-model="student.class_id"
 
-                    ng-options="value.id as value.name  group by value.created_at for value in classes">
-
+                    ng-options="value.id as value.name  group by value.created_at for value in classes" >
 
             </select>
         </div>
 
-
-
-
-
-
-
-        <div class="input-bonche form-group input-icon">
-            <span class="input-group-addon glyphicon glyphicon-user" >Parent</span>
-            <select
-                    class="form-control input-lg"
-                    ng-model="student.parent_id"
-
+        <div class="col-xs-3 col-md-offset-4">
+            <h5 class="demo-panel-title">parent</h5>
+            <select class="form-control select select-info button-bonche input-lg" data-toggle="select" ng-model="student.parent_id"
                     ng-options="value.id as value.second_name  group by value.first_name for value in parents">
 
-
             </select>
+        </div>
+        </div>
+
+    </form>
+
+
+    <div class="row bonche-row">
+
+
+        <div class="col-xs-3 col-md-offset-1">
+            <!-- student-creation.html: -->
+            <a ng-click="createNewStudent()" class="btn btn-small btn-primary">create new student</a>
+        </div>
+
+
+        <div class="col-xs-3 col-md-offset-3">
+            <a ng-click="cancel()" class="btn btn-small btn-info">cancel</a>
+
+
         </div>
 
 
 
 
 
+    </div>
 
-
-
-
-                <!-- student-detail.html: -->
-
-                <div class="bonche-button">
-                <a ng-click="cancel()" class="btn btn-small btn-danger">cancel</a>
-
-
-                    </div>
-
-
-                <div class="bonche-button">
-                <!-- student-creation.html: -->
-                <a ng-click="createNewStudent()" class="btn btn-small btn-primary">create new student</a>
-            </div>
-
-    </form>
 </div>

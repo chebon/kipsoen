@@ -5,6 +5,7 @@
 
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/drunken-parrot.css" rel="stylesheet">
+    <link href="css/flat-ui.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <script src="js/jquery1.js"></script>
     <link href="css/bonche.css" rel="stylesheet">

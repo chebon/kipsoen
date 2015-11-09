@@ -15,6 +15,9 @@
 <body>
 
 
+<div class="container col-lg-offset-3">
+
+
 
 <div class="bonche">
     <a ng-click="createNewAnnouncement()" class="btn btn-primary">new announcement</a>
@@ -26,9 +29,11 @@
         <h3>{{ ann.name }}  </h3>
         <h3>{{ ann.date }}</h3>
         <p>{{ ann.info }}</p>
-        <a ng-click="editAnnouncement(ann.id)" class="btn btn-small btn-success">edit</a>
+        <a ng-click="editAnnouncement(ann.id)" class="btn btn-small btn-info">edit</a>
 
     </div>
+</div>
+
 </div>
 </body>
 </html>

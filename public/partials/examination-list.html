@@ -7,10 +7,10 @@
 </style>
 
 
-<div class="bonche">
-    <a ng-click="createNewExamination()" class="btn btn-info">new examination</a>
+<div class="bonche col-lg-offset-9 ">
+    <a ng-click="createNewExamination()" class="btn btn-primary">new examination</a>
 </div>
-<div class="container">
+<div class="container col-lg-offset-1">
 
 
 
@@ -39,10 +39,10 @@
             <!--<td>{{ examination.id }}</td>-->
 
             <td>{{ examination.examination_name }}</td>
-             <td>{{ examination.stream_ }}</td>
+             <td>{{ examination.class_id }}</td>
             <td>
-                <a ng-click="editExamination(examination.id)" class="btn btn-info">{{examination.parent}}</a>
-                <a ng-click="deleteExamination(examination.id)" class="btn btn-small btn-danger">delete</a>
+                <a ng-click="editExamination(examination.id)" class="btn btn-info">edit</a>
+               <!-- <a ng-click="deleteExamination(examination.id)" class="btn btn-small btn-danger">delete</a>-->
             </td>
         </tr>
         </tbody>

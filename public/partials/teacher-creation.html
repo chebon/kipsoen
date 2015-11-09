@@ -1,19 +1,22 @@
 
 <style>
 
-    .container-fluid{
-        /*padding-top: 3cm;*/
-    }
 
-    div.bonche {
-        padding-top: 3cm;
-    }
 
     div.input-bonche {
 
         padding-bottom: 0.5cm;
         padding-top: 0.5cm;
 
+    }
+
+    .button-bonche{
+
+        background-color: #ECF0F1;
+
+        width: 2cm;
+
+        padding-right: 1cm;
     }
 
     div.bonche-button {
@@ -27,10 +30,15 @@
         padding-bottom: 0.5cm;
     }
 
+    .bonche-row{
+
+        padding-bottom: 1cm;
+    }
+
 
 </style>
 
-<div class="container-fluid control-label col-md-6 col-md-offset-3 bonche">
+<div class="container-fluid control-label col-md-6 col-md-offset-3">
     <h1> Teacher's details</h1>
 
     <form novalidate="novalidate" >
@@ -41,6 +49,7 @@
             </div>
         </div>-->
 
+        <div class="row bonche-row">
 
         <div class="input-bonche form-group input-icon">
             <span class="fa fa-user" id="first_name"></span>
@@ -76,68 +85,49 @@
 
 
 
-        <div class="input-bonche form-group input-icon">
+        <div class="col-xs-3">
 
-            <span>first major</span>
-            <select class="form-group input-lg" ng-model="teacher.major_one"  >
+          <h4 class="demo-panel-title">first major</h4>
+            <select class="form-control select select-primary input-lg button-bonche" ng-model="teacher.major_one"  >
 
-                <option class="form-control input-lg" ng-repeat="major_one in majors" value="{{major_one}}" >{{major_one}}</option>
+                <option ng-repeat="major_one in majors" value="{{major_one}}" >{{major_one}}</option>
             </select>
         </div>
 
 
-        <div class="input-bonche form-group input-icon">
+        <div class="col-xs-3">
 
-            <span >second major</span>
-            <select class="form-group input-lg" ng-model="teacher.major_two"  >
+            <h4 class="demo-panel-title">second major</h4>
+            <select class="form-control select select-primary input-lg button-bonche" ng-model="teacher.major_two"  >
 
-                <option class="form-control input-lg" ng-repeat="major_two in majors" value="{{major_two}}" >{{major_two}}</option>
+                <option  ng-repeat="major_two in majors" value="{{major_two}}" >{{major_two}}</option>
             </select>
         </div>
 
 
-        <div class="input-bonche form-group input-icon">
+        <div class="col-xs-3">
 
-            <span>third major</span>
-            <select class="form-group input-lg" ng-model="teacher.major_three"  >
+            <h4 class="demo-panel-title">third major</h4>
+            <select class="form-control select select-primary input-lg button-bonche" ng-model="teacher.major_three"  >
 
-                <option class="form-control input-lg" ng-repeat="major_three in majors" value="{{major_three}}" >{{major_three}}</option>
+                <option ng-repeat="major_three in majors" value="{{major_three}}" >{{major_three}}</option>
             </select>
         </div>
 
-        <!--<div >
-            <p>selected item is : {{selectedItem}}</p>
-            <select ng-model="patenity">
-                <option ng-repeat="patanety in parenities" value="{{patanety}}">{{patanety}}</option>
-            </select>
-        </div>-->
-
-
-        <!--<div>
-            <label>STUDENT</label>
-            <select
-                    class="form-control input-lg"
-                    ng-model="teacher.teacher"
-
-                    ng-options="value.name as value.last_name  group by value.first_name for value in teachers">
-
-                <option>--</option>
-            </select>
-        </div>
--->
+       </div>
 
 
 
 
 
 
-
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
+        <div class="row bonche-row">
+            <div class="col-md-3 ">
                 <!-- teacher-detail.html: -->
                 <a ng-click="cancel()" class="btn btn-small btn-danger">cancel</a>
 
-
+            </div>
+            <div class="col-md-3 col-md-offset-3">
                 <!-- teacher-creation.html: -->
                 <a ng-click="createNewTeacher()" class="btn btn-small btn-primary">create new teacher</a>
             </div>
