@@ -1,4 +1,4 @@
-Have done this project for my high school as an appreciation to all the support they gave me i love you guys
+Have done this project with laravel 4.2 and angular js, for my high school as an appreciation to all the support they gave me i love you guys
 
 
 
@@ -32,3 +32,4 @@ email:jay@jayz.com
 password:password123
 
 principle and a few things will be up before end of weekend
+
