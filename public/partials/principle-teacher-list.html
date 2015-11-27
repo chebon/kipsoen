@@ -1,0 +1,72 @@
+
+<div class="container">
+
+
+    <style >.bonche
+    {
+        padding-top: 2cm;
+        padding-bottom: 1cm;
+    }
+    </style>
+
+    <div class="bonche">
+
+
+
+    <table class="table">
+        <tbody>
+
+
+        <tr>
+
+
+            <form class="form-control">
+
+                <input st-search="" class="form-control" placeholder="complete student search" type="text"/>
+
+            </form>
+
+
+        </tr>
+        </tbody>
+    </table>
+
+
+    <table class="table table-condensed table-bordered table-hover tableTop">
+        <thead>
+
+        <!--<tr>
+            <th colspan="6"><input st-search="" class="form-control" placeholder="complete teacher search" type="text"/>
+            </th>
+        </tr>-->
+        <tr>
+            <!--<th st-sort="id">id</th>-->
+            <th st-sort="firstName">first name</th>
+            <th st-sort="lastName">last name</th>
+            <th st-sort="second_name">second name</th>
+            <th st-sort="phone_number">phone number</th>
+            <th st-sort="actions">actions</th>
+        </tr>
+
+        </thead>
+        <tbody>
+        <tr ng-repeat="teacher in teachers">
+            <!--<td>{{ teacher.id }}</td>-->
+            <td>{{ teacher.first_name }}</td>
+            <td>{{ teacher.last_name }}</td>
+            <td>{{ teacher.second_name }}</td>
+            <td>{{ teacher.phone_number }}</td>
+
+            <!-- <td>{{ teacher.class }}</td>-->
+            <td>
+                <a ng-click="editTeacher(teacher.id)" class="btn btn-stoke">update</a>
+
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+</div>
+

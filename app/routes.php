@@ -18,10 +18,7 @@ Route::get('/hello', function()
 });
 
 
-Route::get('/', function()
-{
-    return View::make('home');
-});
+
 
 
 Route::group(array('before' => 'auth'), function() {
@@ -146,7 +143,11 @@ Route::get('/logout', function()
 });
 
 
-Route::get('/try', function()
-{
-    return View::make('index_0ne');
-});
+
+
+
+
+Route::resource('principles', 'PrinciplesController');
+
+
+Route::resource('/', 'Home');

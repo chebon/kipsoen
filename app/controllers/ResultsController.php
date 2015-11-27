@@ -104,6 +104,7 @@ class ResultsController extends \BaseController {
         $religious_education=Input::get('religious_education');
         $history=Input::get('history');
         $agriculture=Input::get('agriculture');
+        $principle_comment=Input::get('principles_comment');
         $data= array(
 //The one in quotes is the way you have named the fields in your database
             'mathematics'=>$mathematics,
@@ -120,6 +121,7 @@ class ResultsController extends \BaseController {
             'first_name'=>$first_name,
             'last_name'=>$middle_name,
             'examination_id'=>$examination,
+            'principles_comment'=>$principle_comment,
 
 
             'total'=>$mathematics+$english+$kiswahili+$biology+$physics+$chemistry+$history+$agriculture+$religious_education+$business_studies

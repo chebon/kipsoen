@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Creative - Start Bootstrap Theme </title>
+    <title>bonche</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -32,9 +32,18 @@
 
         .bonche{
 
-            padding-top: 3cm;
+            padding-top: 8cm;
             padding-bottom: 2cm;
 
+        }
+
+        .bonche-color{
+            color: #f84545;
+        }
+
+        .map{
+
+            height: 10cm;
         }
 
     </style>
@@ -70,9 +79,7 @@
                     <a class="page-scroll" href="#about">About</a>
                 </li>
 
-                <li>
-                    <a class="page-scroll" href="#portfolio">Login</a>
-                </li>
+
                 <li>
                     <a class="page-scroll" href="#contact">Contact</a>
                 </li>
@@ -86,12 +93,56 @@
 <header>
     <div class="header-content">
         <div class="header-content-inner">
-            <h1>Pray that the holy water don't go dry.</h1>
+            <h1>Kipsoen School</h1>
             <hr>
             <h6>What the individual creates is an expression of the individual, just as the individual is an expression of the genes!</h6>
             <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
         </div>
+
+
+
+
+<div class="container-fluid bonche">
+
+    <div class="col-lg-6 col-lg-offset-5 bonche-color">
+        <?php
+
+        $message = Session::get('message');
+        echo $message; ?>
     </div>
+    <div class="row no-gutter">
+        <div class="col-lg-12 col-sm-12 ">
+
+            <form role="form" action="/" method="post" >
+
+
+
+                <div class="form-group has-feedback col-xs-3 col-lg-offset-3">
+                    <span class="form-control-feedback fui-user"></span>
+                    <input type="text" name="email" placeholder="Email..." class="form-username form-control" id="form-email">
+                </div>
+                <div class="form-group  col-xs-3 ">
+                    <span class="form-control-feedback fui-lock"></span>
+                    <input type="password" name="password" placeholder="Password..." class="form-password form-control" id="form-password">
+                </div>
+                <button type="submit" class="btn">Sign in!</button>
+
+
+
+
+
+            </form>
+
+        </div>
+
+
+
+
+
+    </div>
+</div>
+
+        </div>
 </header>
 
 <section class="bg-primary" id="about">
@@ -110,36 +161,9 @@
     </div>
 </section>
 
-<div class="bonche">
 
-<section class="no-padding" id="portfolio">
-    <div class="container-fluid">
-        <div class="row no-gutter">
-            <div class="col-lg-12 col-sm-12 ">
-
-                <form role="form" action="/login" method="post" >
-                    <div class="form-group has-feedback col-xs-3 col-lg-offset-3">
-                        <span class="form-control-feedback fui-user"></span>
-                        <input type="text" name="email" placeholder="Email..." class="form-username form-control" id="form-email">
-                    </div>
-                    <div class="form-group  col-xs-3 ">
-                        <span class="form-control-feedback fui-lock"></span>
-                        <input type="password" name="password" placeholder="Password..." class="form-password form-control" id="form-password">
-                    </div>
-                    <button type="submit" class="btn">Sign in!</button>
-
-
-                </form>
-
-            </div>
-
-
-
-
-
-        </div>
-    </div>
-</section>
+<div class="map">
+<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="100%" src="https://maps.google.com/maps?hl=en&q=kipsoen secondary school&ie=UTF8&t=roadmap&z=15&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com</a></small></div><div><small><a href="http://buyproxies.io/">buyproxies.io</a></small></div></iframe>
 
 </div>
 

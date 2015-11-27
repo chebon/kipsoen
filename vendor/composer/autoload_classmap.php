@@ -6,7 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Ambenge' => $baseDir . '/app/models/Ambenge.php',
     'AmbengesController' => $baseDir . '/app/controllers/AmbengesController.php',
     'Announcement' => $baseDir . '/app/models/Announcement.php',
     'AnnouncementsController' => $baseDir . '/app/controllers/AnnouncementsController.php',
@@ -99,6 +98,8 @@ return array(
     'CreateExaminationsTable' => $baseDir . '/app/database/migrations/2015_09_11_194145_create_examinations_table.php',
     'CreateImagesTable' => $baseDir . '/app/database/migrations/2015_09_28_192707_create_images_table.php',
     'CreateParentsTable' => $baseDir . '/app/database/migrations/2015_02_20_141034_create_parents_table.php',
+    'CreatePrincipleTable' => $baseDir . '/app/database/migrations/2015_11_26_143331_create_principle_table.php',
+    'CreatePropertyTypesTable' => $baseDir . '/app/database/migrations/2015_11_18_140154_create_propertyTypes_table.php',
     'CreateResultsTable' => $baseDir . '/app/database/migrations/2015_02_26_190105_create_results_table.php',
     'CreateSecretariesTable' => $baseDir . '/app/database/migrations/2015_10_05_071815_create_secretaries_table.php',
     'CreateStudentsTable' => $baseDir . '/app/database/migrations/2015_02_20_091946_create_students_table.php',
@@ -144,6 +145,7 @@ return array(
     'GuzzleHttp\\Psr7\\StreamDecoratorTrait' => $vendorDir . '/guzzlehttp/psr7/src/StreamDecoratorTrait.php',
     'GuzzleHttp\\Psr7\\StreamWrapper' => $vendorDir . '/guzzlehttp/psr7/src/StreamWrapper.php',
     'GuzzleHttp\\Psr7\\Uri' => $vendorDir . '/guzzlehttp/psr7/src/Uri.php',
+    'Home' => $baseDir . '/app/controllers/home.php',
     'HomeController' => $baseDir . '/app/controllers/HomeController.php',
     'IlluminateQueueClosure' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/IlluminateQueueClosure.php',
     'Illuminate\\Auth\\AuthManager' => $vendorDir . '/laravel/framework/src/Illuminate/Auth/AuthManager.php',
@@ -1192,6 +1194,10 @@ return array(
     'Predis\\Session\\SessionHandler' => $vendorDir . '/predis/predis/lib/Predis/Session/SessionHandler.php',
     'Predis\\Transaction\\AbortedMultiExecException' => $vendorDir . '/predis/predis/lib/Predis/Transaction/AbortedMultiExecException.php',
     'Predis\\Transaction\\MultiExecContext' => $vendorDir . '/predis/predis/lib/Predis/Transaction/MultiExecContext.php',
+    'Principle' => $baseDir . '/app/models/Principle.php',
+    'PrinciplesController' => $baseDir . '/app/controllers/PrinciplesController.php',
+    'PropertyType' => $baseDir . '/app/models/PropertyType.php',
+    'PropertyTypesController' => $baseDir . '/app/controllers/PropertyTypesController.php',
     'Psr\\Http\\Message\\MessageInterface' => $vendorDir . '/psr/http-message/src/MessageInterface.php',
     'Psr\\Http\\Message\\RequestInterface' => $vendorDir . '/psr/http-message/src/RequestInterface.php',
     'Psr\\Http\\Message\\ResponseInterface' => $vendorDir . '/psr/http-message/src/ResponseInterface.php',
@@ -1217,6 +1223,7 @@ return array(
     'Stack\\Builder' => $vendorDir . '/stack/builder/src/Stack/Builder.php',
     'Stack\\StackedHttpKernel' => $vendorDir . '/stack/builder/src/Stack/StackedHttpKernel.php',
     'Student' => $baseDir . '/app/models/Student.php',
+    'StudentResultsController' => $baseDir . '/app/controllers/StudentResultsController.php',
     'StudentsController' => $baseDir . '/app/controllers/StudentsController.php',
     'Symfony\\Component\\BrowserKit\\Client' => $vendorDir . '/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php',
     'Symfony\\Component\\BrowserKit\\Cookie' => $vendorDir . '/symfony/browser-kit/Symfony/Component/BrowserKit/Cookie.php',

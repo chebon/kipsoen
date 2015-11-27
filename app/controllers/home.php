@@ -1,33 +1,21 @@
 <?php
 
-class LoginsController extends \BaseController {
+class Home extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
-	 * GET /logins
+	 * GET /home
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-		//echo 'welcome you are loged in this is the index function';
-
-        /*return Redirect::to('/index');*/
-
-        //return View::make('sessions.login');
-
-       return View::make('test');
-
-
-
-
-
-
+        return View::make('home');
 	}
 
 	/**
 	 * Show the form for creating a new resource.
-	 * GET /logins/create
+	 * GET /home/create
 	 *
 	 * @return Response
 	 */
@@ -38,13 +26,13 @@ class LoginsController extends \BaseController {
 
 	/**
 	 * Store a newly created resource in storage.
-	 * POST /logins
+	 * POST /home
 	 *
 	 * @return Response
 	 */
 	public function store()
 	{
-		//
+        //
 
 
         try
@@ -81,7 +69,7 @@ class LoginsController extends \BaseController {
 
 
 
-              return Redirect::to('/teacher');
+                return Redirect::to('/teacher');
 
 
             } elseif ($users->inGroup($student)) {
@@ -112,7 +100,7 @@ class LoginsController extends \BaseController {
 
                 return Redirect::to('/paren');
 
-               // echo "section. 80";
+                // echo "section. 80";
 
 
             }
@@ -146,7 +134,7 @@ class LoginsController extends \BaseController {
         {
             return Redirect::to('/')->with('message', 'password required');
 
-           // return Redirect::to('/login');
+            // return Redirect::to('/login');
         }
         catch (Cartalyst\Sentry\Users\WrongPasswordException $e)
 
@@ -155,7 +143,7 @@ class LoginsController extends \BaseController {
             return Redirect::to('/')->with('message', 'Wrong password, try again.');
 
 
-           // return Redirect::to('/login');
+            // return Redirect::to('/login');
 
         }
         catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
@@ -182,9 +170,9 @@ class LoginsController extends \BaseController {
         {
 
             return Redirect::to('/')->with('message', 'User is suspended.');
-           // echo 'User is suspended.';
+            // echo 'User is suspended.';
 
-           // return Redirect::to('/login');
+            // return Redirect::to('/login');
         }
         catch (Cartalyst\Sentry\Throttling\UserBannedException $e)
         {
@@ -196,22 +184,24 @@ class LoginsController extends \BaseController {
 
         }
 
-	}
+
+    }
 
 	/**
 	 * Display the specified resource.
-	 * GET /logins/{id}
+	 * GET /home/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
 	public function show($id)
-    {
-    }
+	{
+		//
+	}
 
 	/**
 	 * Show the form for editing the specified resource.
-	 * GET /logins/{id}/edit
+	 * GET /home/{id}/edit
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -223,7 +213,7 @@ class LoginsController extends \BaseController {
 
 	/**
 	 * Update the specified resource in storage.
-	 * PUT /logins/{id}
+	 * PUT /home/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -235,16 +225,14 @@ class LoginsController extends \BaseController {
 
 	/**
 	 * Remove the specified resource from storage.
-	 * DELETE /logins/{id}
+	 * DELETE /home/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
 	public function destroy($id)
 	{
-        Sentry::logout();
-
-        return Redirect::to('/');
+		//
 	}
 
 }
