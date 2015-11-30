@@ -32,6 +32,16 @@ kipsoen.config(['$routeProvider', function ($routeProvider) {
 
     $routeProvider.when('/result-list', {templateUrl: 'partials/result-list.html', controller: 'ResultListCtrl'});
     $routeProvider.when('/result-detail/:id', {templateUrl: 'partials/result-detail.html', controller: 'ResultDetailCtrl'});
+    $routeProvider.when('/result-detail-mathematics/:id', {templateUrl: 'partials/result-detail-mathematics.html', controller: 'ResultDetailCtrl'});
+    $routeProvider.when('/result-detail-english/:id', {templateUrl: 'partials/result-detail-english.html', controller: 'ResultDetailCtrl'});
+    $routeProvider.when('/result-detail-kiswahili/:id', {templateUrl: 'partials/result-detail-kiswahili.html', controller: 'ResultDetailCtrl'});
+    $routeProvider.when('/result-detail-biology/:id', {templateUrl: 'partials/result-detail-biology.html', controller: 'ResultDetailCtrl'});
+    $routeProvider.when('/result-detail-chemistry/:id', {templateUrl: 'partials/result-detail-chemistry.html', controller: 'ResultDetailCtrl'});
+    $routeProvider.when('/result-detail-physics/:id', {templateUrl: 'partials/result-detail-physics.html', controller: 'ResultDetailCtrl'});
+    $routeProvider.when('/result-detail-business-studies/:id', {templateUrl: 'partials/result-detail-business-studies.html', controller: 'ResultDetailCtrl'});
+    $routeProvider.when('/result-detail-religious_education/:id', {templateUrl: 'partials/result-detail-religious_education.html', controller: 'ResultDetailCtrl'});
+    $routeProvider.when('/result-detail-history/:id', {templateUrl: 'partials/result-detail-history.html', controller: 'ResultDetailCtrl'});
+    $routeProvider.when('/result-detail-agriculture/:id', {templateUrl: 'partials/result-detail-agriculture.html', controller: 'ResultDetailCtrl'});
 
 
     $routeProvider.when('/announcement-list', {templateUrl: 'partials/announcement-list.html', controller: 'AnnouncementListCtrl'});

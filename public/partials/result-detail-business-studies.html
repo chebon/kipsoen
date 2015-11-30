@@ -1,0 +1,127 @@
+
+
+
+<style>
+    .bonche-padding{
+
+        padding-bottom: 1cm;
+    }
+
+</style>
+
+<div class="container-fluid control-label  col-md-offset-3">
+    <div class="col-lg-offset-2">
+        <h3> Student's detail</h3>
+    </div>
+
+    <form novalidate="novalidate " >
+
+
+
+        <div class="row ">
+
+            <div class="input-bonche form-group input-icon col-xs-3" ng-repeate="result in results" >
+
+                <h6>{{result.last_name}}</h6>
+            </div>
+
+
+            <div class="input-bonche form-group input-icon col-xs-3" ng-repeate="result in results" >
+
+
+                <h6>{{result.first_name}}</h6>
+
+            </div>
+
+            <div class="input-bonche form-group input-icon col-xs-3"  ng-repeate="result in results">
+
+                <h6>{{result.registration_number}}</h6>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-offset-2">
+
+            <h3>examination's detail</h3>
+
+        </div>
+
+        <div class="row">
+
+            <div class="input-bonche form-group input-icon col-xs-3 col-lg-offset-3" ng-repeate="result in results">
+
+                <h6>{{result.examination_name}}</h6>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="input-bonche form-group col-xs-3 ">
+                <span class="fa fa-user">cat one</span>
+                <input type="number" class="form-control" placeholder="{{result.business_studies_cat_one}}"  ng-model="result.business_studies_cat_one">
+            </div>
+
+            <div class="input-bonche form-group col-xs-3 ">
+                <span class="fa fa-user" id="english">cat two</span>
+                <input type="number" class="form-control" placeholder="{{result.business_studies_cat_two}}" aria-describedby="english" ng-model="result.business_studies_cat_two">
+            </div>
+
+            <div class="input-bonche form-group col-xs-3 col">
+                <span class="fa fa-user " id="kiswahili">final</span>
+                <input type="number" class="form-control" placeholder="{{result.business_studies_final}}" aria-describedby="kiswahili" ng-model="result.business_studies_final">
+            </div>
+
+
+
+            <div class="input-bonche form-group input-icon col-xs-3" ng-repeate="result in results" >
+
+
+                <h6>{{result.business_studies}}</h6>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </form>
+
+
+
+
+
+
+
+
+    <div class="row">
+        <div class="col-md-3 bonche-padding">
+
+            <!-- result-detail.html: -->
+
+
+            <a ng-click="cancel()" class="btn btn-small btn-danger">cancel</a>
+
+
+        </div>
+        <div class="col-md-3 col-md-offset-3">
+
+
+            <!-- result-creation.html: -->
+            <a ng-click="updateResult()" class="btn btn-small btn-primary">Post result</a>
+        </div>
+    </div>
+
+
+</div>
+
+</div>
