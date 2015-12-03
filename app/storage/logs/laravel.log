@@ -27664,3 +27664,12 @@ Stack trace:
 #25 /home/dennis/laravelapps/kipsoen/public/index.php(49): Illuminate\Foundation\Application->run()
 #26 /home/dennis/laravelapps/kipsoen/server.php(19): require_once('/home/dennis/la...')
 #27 {main} [] []
+[2015-11-30 17:12:19] production.ERROR: exception 'InvalidArgumentException' with message 'Command "seve" is not defined.
+
+Did you mean this?
+    serve' in /home/dennis/laravelapps/kipsoen/vendor/symfony/console/Symfony/Component/Console/Application.php:564
+Stack trace:
+#0 /home/dennis/laravelapps/kipsoen/vendor/symfony/console/Symfony/Component/Console/Application.php(190): Symfony\Component\Console\Application->find('seve')
+#1 /home/dennis/laravelapps/kipsoen/vendor/symfony/console/Symfony/Component/Console/Application.php(124): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /home/dennis/laravelapps/kipsoen/artisan(59): Symfony\Component\Console\Application->run()
+#3 {main} [] []

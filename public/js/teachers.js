@@ -42,6 +42,8 @@ kipsoen.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/result-detail-religious_education/:id', {templateUrl: 'partials/result-detail-religious_education.html', controller: 'ResultDetailCtrl'});
     $routeProvider.when('/result-detail-history/:id', {templateUrl: 'partials/result-detail-history.html', controller: 'ResultDetailCtrl'});
     $routeProvider.when('/result-detail-agriculture/:id', {templateUrl: 'partials/result-detail-agriculture.html', controller: 'ResultDetailCtrl'});
+    $routeProvider.when('/result-detail-geography/:id', {templateUrl: 'partials/result-detail-geography.html', controller: 'ResultDetailCtrl'});
+    $routeProvider.when('/result-detail-computer-studies/:id', {templateUrl: 'partials/result-detail-computer-studies.html', controller: 'ResultDetailCtrl'});
 
 
     $routeProvider.when('/announcement-list', {templateUrl: 'partials/announcement-list.html', controller: 'AnnouncementListCtrl'});

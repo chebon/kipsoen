@@ -15,6 +15,8 @@ kipsoen.controller('ResultListCtrl', ['$scope', 'ResultsFactory', 'ResultFactory
             $location.path('/result-detail/' + resultId);
         };
 
+
+
         $scope.ViewResult = function (resultId) {
             $location.path('/result-det/' + resultId);
         };
@@ -69,6 +71,58 @@ kipsoen.controller('ResultDetailCtrl', ['$scope', '$routeParams', 'ResultsFactor
             ResultFactory.update($scope.result);
             $location.path('/result-list');
         };
+
+        $scope.mathematics = function (resultId) {
+            $location.path('/result-detail-mathematics/' + resultId);
+        };
+
+        $scope.english = function (resultId) {
+            $location.path('/result-detail-english/' + resultId);
+        };
+
+        $scope.kiswahili = function (resultId) {
+            $location.path('/result-detail-kiswahili/' + resultId);
+        };
+
+        $scope.physics = function (resultId) {
+            $location.path('/result-detail-physics/' + resultId);
+        };
+
+        $scope.chemistry = function (resultId) {
+            $location.path('/result-detail-chemistry/' + resultId);
+        };
+
+        $scope.biology = function (resultId) {
+            $location.path('/result-detail-biology/' + resultId);
+        };
+
+        $scope.geography = function (resultId) {
+            $location.path('/result-detail-geography/' + resultId);
+        };
+
+        $scope.computer_studies = function (resultId) {
+            $location.path('/result-detail-computer-studies/' + resultId);
+        };
+
+        $scope.agriculture = function (resultId) {
+            $location.path('/result-detail-agriculture/' + resultId);
+        };
+
+        $scope.history = function (resultId) {
+            $location.path('/result-detail-history/' + resultId);
+        };
+
+        $scope.religious_education = function (resultId) {
+            $location.path('/result-detail-religious_education/' + resultId);
+        };
+
+        $scope.business_studies = function (resultId) {
+            $location.path('/result-detail-business-studies/' + resultId);
+        };
+
+
+
+
 
         // callback for ng-click 'cancel':
         $scope.cancel = function () {

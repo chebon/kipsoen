@@ -92,7 +92,6 @@ class ResultsController extends \BaseController {
        // $data =Input::all();
 
         $first_name=Input::get('first_name');
-
         $middle_name=Input::get('last_name');
         $examination=Input::get('examination_id');
         $mathematics_cat_one=Input::get('mathematics_cat_one');
@@ -122,6 +121,12 @@ class ResultsController extends \BaseController {
         $history_final=Input::get('history_final');
         $history_cat_one=Input::get('history_cat_one');
         $history_cat_two=Input::get('history_cat_two');
+        $geography_cat_one=Input::get('geography_cat_one');
+        $geography_cat_two=Input::get('geography_cat_two');
+        $computer_studies_cat_one=Input::get('computer_studies_cat_one');
+        $computer_studies_cat_two=Input::get('computer_studies_cat_two');
+        $computer_studies_final=Input::get('computer_studies_final');
+        $geography_final=Input::get('geography_final');
         $agriculture_final=Input::get('agriculture_final');
         $agriculture_cat_one=Input::get('agriculture_cat_one');
         $agriculture_cat_two=Input::get('agriculture_cat_two');
@@ -137,6 +142,8 @@ class ResultsController extends \BaseController {
         $religious_education = $religious_education_cat_one+$religious_education_cat_two+$religious_education_final;
         $history = $history_cat_one+$history_cat_two+$history_final;
         $agriculture = $agriculture_cat_one + $agriculture_cat_two +$agriculture_final;
+        $geography = $geography_cat_one+$geography_cat_two+$geography_final;
+        $computer_studies = $computer_studies_cat_one+$computer_studies_cat_two+$computer_studies_final;
 
 
         $data= array(
@@ -186,6 +193,15 @@ class ResultsController extends \BaseController {
             'chemistry_cat_two'=>$chemistry_cat_two,
             'physics_cat_one'=>$physics_cat_one,
             'physics_cat_two'=>$physics_cat_two,
+            'geography'=>$geography,
+            'geography_cat_one'=>$geography_cat_one,
+            'geography_cat_two'=>$geography_cat_two,
+            'geography_final'=>$geography_final,
+            'computer_studies'=>$computer_studies,
+            'computer_studies_cat_one'=>$computer_studies_cat_one,
+            'computer_studies_cat_two'=>$computer_studies_cat_two,
+            'computer_studies_final'=>$computer_studies_final,
+
 
 
             'total'=>$mathematics+$english+$kiswahili+$biology+$physics+$chemistry+$history+$agriculture+$religious_education+$business_studies

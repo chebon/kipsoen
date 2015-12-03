@@ -1,14 +1,5 @@
 
 
-
-<style>
-    .bonche-padding{
-
-        padding-bottom: 1cm;
-    }
-
-</style>
-
 <div class="container-fluid control-label  col-md-offset-3">
     <div class="col-lg-offset-2">
     <h3> Student's detail</h3>
@@ -60,18 +51,20 @@
         <div class="row">
 
         <div class="input-bonche form-group col-xs-3 ">
-            <span class="fa fa-user">math</span>
-            <input type="number" class="form-control" placeholder="{{result.mathematics}}"  ng-model="result.mathematics_cat_one">
+
+            <!--<input type="number" class="form-control" placeholder="{{result.mathematics}}"  ng-model="result.mathematics_cat_one">-->
+            <a ng-click="mathematics(result.id)" class="btn btn-primary">mathematics</a>
         </div>
 
         <div class="input-bonche form-group col-xs-3 ">
-            <span class="fa fa-user" id="english">Eng</span>
-            <input type="number" class="form-control" placeholder="{{result.english}}" aria-describedby="english" ng-model="result.english">
+
+            <a ng-click="english(result.id)" class="btn btn-primary">english</a>
+
         </div>
 
             <div class="input-bonche form-group col-xs-3 col">
-                <span class="fa fa-user " id="kiswahili">Kis</span>
-                <input type="number" class="form-control" placeholder="{{result.kiswahili}}" aria-describedby="kiswahili" ng-model="result.kiswahili">
+
+                <a ng-click="kiswahili(result.id)" class="btn btn-primary">kiswahili</a>
             </div>
 
         </div>
@@ -81,20 +74,20 @@
 
 
         <div class="input-bonche form-group col-xs-3 ">
-            <span class="fa fa-user" id="physics">Phy</span>
-            <input type="number" class="form-control" placeholder="{{result.physics}}" aria-describedby="physics" ng-model="result.physics">
+
+            <a ng-click="physics(result.id)" class="btn btn-primary">physics</a>
         </div>
 
         <div class="input-bonche form-group col-xs-3 ">
-            <span class="fa fa-user " id="chemistry">Che</span>
-            <input type="number" class="form-control" placeholder="{{result.chemistry}}" aria-describedby="chemistry" ng-model="result.chemistry">
+
+            <a ng-click="chemistry(result.id)" class="btn btn-primary">chemistry</a>
         </div>
 
 
 
         <div class="input-bonche form-group col-xs-3">
-            <span class="fa fa-user " id="biology">Bio</span>
-            <input type="number" class="form-control" placeholder="{{result.biology}}" aria-describedby="physics" ng-model="result.biology">
+
+            <a ng-click="biology(result.id)" class="btn btn-primary">biology</a>
         </div>
 
         </div>
@@ -103,20 +96,20 @@
         <div class="row ">
 
             <div class="input-bonche form-group col-xs-3">
-                <span class="fa fa-user " >Geo</span>
-                <input type="number" class="form-control" placeholder="{{result.biology}}" aria-describedby="physics" ng-model="result.biology">
+
+                <a ng-click="geography(result.id)" class="btn btn-primary">geography</a>
             </div>
 
 
             <div class="input-bonche form-group col-xs-3">
-                <span class="fa fa-user " >com</span>
-                <input type="number" class="form-control" placeholder="{{result.biology}}" aria-describedby="physics" ng-model="result.biology">
+
+                <a ng-click="computer_studies(result.id)" class="btn btn-primary">computer studies</a>
             </div>
 
 
             <div class="input-bonche form-group col-xs-3">
-                <span class="fa fa-user" id="agriculture">Agr</span>
-                <input type="number" class="form-control" placeholder="{{result.agriculture}}" aria-describedby="agriculture" ng-model="result.agriculture">
+
+                <a ng-click="agriculture(result.id)" class="btn btn-primary">agriculture</a>
             </div>
 
         </div>
@@ -124,22 +117,24 @@
         <div class="row">
 
         <div class="input-bonche form-group col-xs-3 ">
-            <span class="fa fa-user" id="history">His</span>
-            <input type="number" class="form-control" placeholder="{{result.history}}" aria-describedby="chemistry" ng-model="result.history">
+
+            <a ng-click="history(result.id)" class="btn btn-primary">history</a>
+
+
         </div>
 
 
         <div class="input-bonche form-group col-xs-3">
-            <span class="fa fa-user" id="religious_education"> Rel</span>
-            <input type="number" class="form-control" placeholder="{{result.religious_education}}" aria-describedby="religious_education" ng-model="result.religious_education">
+
+            <a ng-click="religious_education(result.id)" class="btn btn-primary">Religious education</a>
         </div>
 
 
 
 
         <div class="input-bonche form-group col-xs-3">
-            <span class="fa fa-user " id="business_studies">Bss</span>
-            <input type="number" class="form-control" placeholder="{{result.business_studies}}" aria-describedby="sizing-addon1" ng-model="result.business_studies">
+
+            <a ng-click="business_studies(result.id)" class="btn btn-primary">Business studies</a>
         </div>
 
         </div>
@@ -157,23 +152,7 @@
 
 
 
-        <div class="row">
-            <div class="col-md-3 bonche-padding">
 
-                <!-- result-detail.html: -->
-
-
-                <a ng-click="cancel()" class="btn btn-small btn-danger">cancel</a>
-
-
-                </div>
-            <div class="col-md-3 col-md-offset-3">
-
-
-                <!-- result-creation.html: -->
-                <a ng-click="updateResult()" class="btn btn-small btn-primary">Post result</a>
-                </div>
-            </div>
 
 
         </div>
