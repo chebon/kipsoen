@@ -142,14 +142,16 @@ Route::filter('auth', function()
 Route::filter('teacher', function()
 {
     $user = Sentry::getUser();
-    $admin = Sentry::findGroupByName('teachers');
+    $teacher = Sentry::findGroupByName('teachers');
 
-    if ( ! Sentry::check())
+
+    if (! Sentry::check())
     {
-        return Redirect::to('/login');
+        return Redirect::to('/')->with('message', 'login to proceed');
     }
-
-
+    elseif(! $user->inGroup($teacher)){
+        return Redirect::to('/')->with('message', 'permission denied');
+    }
 
 });
 
@@ -158,19 +160,31 @@ Route::filter('teacher', function()
 Route::filter('parent', function()
 {
     $user = Sentry::getUser();
-    $admin = Sentry::findGroupByName('parents');
+    $parent = Sentry::findGroupByName('parents');
 
     if ( ! Sentry::check())
     {
-        return Redirect::route('/logins');
+        return Redirect::route('/')->with('message', 'login to proceed');
+    }
+    elseif(! $user->inGroup($parent)){
+        return Redirect::to('/')->with('message', 'permission denied');
     }
 });
 
 
 Route::filter('HOD', function()
 {
-   // Sentry::getUser()->addGroup( Sentry::getGroupProvider()->findByName('HOD') );
 
+    $user = Sentry::getUser();
+    $hod = Sentry::findGroupByName('HOD');
+
+    if ( ! Sentry::check())
+    {
+        return Redirect::route('/')->with('message', 'login to proceed');
+    }
+    elseif(! $user->inGroup($hod)){
+        return Redirect::to('/')->with('message', 'permission denied');
+    }
 
 });
 
@@ -179,12 +193,16 @@ Route::filter('HOD', function()
 Route::filter('student', function()
 {
     $user = Sentry::getUser();
-    $admin = Sentry::findGroupByName('students');
+    $student = Sentry::findGroupByName('students');
 
     if ( ! Sentry::check())
     {
-        return Redirect::route('/logins');
+        return Redirect::to('/')->with('message', 'login to proceed');
     }
+    elseif(! $user->inGroup($student)){
+        return Redirect::to('/')->with('message', 'permission denied');
+    }
+
 
 
 });

@@ -91,16 +91,6 @@
 </nav>
 
 <header>
-    <div class="header-content">
-        <div class="header-content-inner">
-            <h1>Kipsoen School</h1>
-            <hr>
-            <h6>What the individual creates is an expression of the individual, just as the individual is an expression of the genes!</h6>
-            <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
-        </div>
-
-
-
 
 <div class="container-fluid bonche">
 
@@ -149,12 +139,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading">Everybody wanna cut the legs off him, Kunta</h2>
+                <h2 class="section-heading">I am seduced by your intelligent, intelligent mind</h2>
                 <hr class="light">
-                <p class="text-faded">The ghost of Mandela, hope my flows they propel it
-                    let my word be your earth and moon you consume every message
-                    as I lead this army make room for mistakes and depression
-                    and if you riding with me nigga, let me ask this question nigga</p>
+                <p class="text-faded">"Transforming feelings into words is the most beautiful, the most complicated and the best thing a human being can do. It is intelligence.
+                    Intelligence is life."</p>
                 <a href="#" class="btn btn-default btn-xl">Get Started!</a>
             </div>
         </div>
